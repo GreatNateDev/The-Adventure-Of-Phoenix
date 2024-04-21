@@ -1,0 +1,12 @@
+Timer
+ColorRect
+CollisionShape2D
+Area2D
+Sprite2D
+AnimationPlayer
+ProgressBar
+CanvasLayer
+CharacterBody2D
+Camera2D
+Label
+AnimationTree
