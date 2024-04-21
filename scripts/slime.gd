@@ -11,7 +11,8 @@ func _physics_process(delta):
 		move_and_collide(velocity)
 		for body in $player_intersector.get_overlapping_bodies():
 			if body.name == "Phoenix":
-				
+				pass
+				#fix kb stuffs
 func _on_player_intersector_body_entered(body):
 	if body.name == "Phoenix":
 		player.hp -= damage
