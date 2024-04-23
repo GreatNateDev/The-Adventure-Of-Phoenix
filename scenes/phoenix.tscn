@@ -283,6 +283,7 @@ zoom = Vector2(3.075, 3.075)
 position_smoothing_speed = 3.0
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+visible = false
 
 [node name="hpbar" type="ProgressBar" parent="CanvasLayer"]
 offset_right = 140.0

@@ -3,3 +3,5 @@ res://scenes/hyrule.tscn
 res://scenes/phoenix.tscn
 res://scenes/slime.tscn
 res://scripts/slime.gd
+res://door.gd
+res://door.tscn
