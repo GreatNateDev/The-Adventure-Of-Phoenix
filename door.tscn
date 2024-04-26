@@ -15,3 +15,5 @@ shape = SubResource("RectangleShape2D_3faye")
 
 [node name="door_sprite" type="Sprite2D" parent="."]
 texture = ExtResource("1_uxc5x")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

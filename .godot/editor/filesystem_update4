@@ -5,3 +5,4 @@ res://scenes/slime.tscn
 res://scripts/slime.gd
 res://door.gd
 res://door.tscn
+res://scripts/phoenix.gd

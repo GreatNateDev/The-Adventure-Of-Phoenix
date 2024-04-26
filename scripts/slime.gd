@@ -2,7 +2,7 @@ extends CharacterBody2D
 var speed = 20
 var damage = 10
 var hits = 4
-var kbpwr = 700
+var kbpwr = 2000
 var take_kb = false
 var inv = false
 @onready var player = get_parent().get_node("Phoenix")
@@ -22,13 +22,17 @@ func _on_player_intersector_body_entered(body):
 func _on_player_intersector_area_entered(area:Area2D):
 	if area.name == "sword" and inv == false:
 		hits -= player.power
+		print(hits)
+		print(player.power)
 		print("hit")
 		#knockback("self")
 		inv = true
 		$Timer.start()
+		if hits <= 0:
+			self.queue_free()
 func knockback(who):
 	if who == "player":
-			var kbdir = (player.last_mov - velocity).normalized() *kbpwr
+			var kbdir = (velocity - Vector2(0,0)).normalized() *kbpwr
 			player.velocity = kbdir
 			player.move_and_slide()
 	#elif who == "self":

@@ -1,7 +1,7 @@
 extends CharacterBody2D
 var hp = 100
 var speed = 200
-var last_mov = null
+var last_mov = Vector2(0,0)
 var stuck = false
 var power = 1
 @onready var bar = get_node("CanvasLayer/hpbar")
