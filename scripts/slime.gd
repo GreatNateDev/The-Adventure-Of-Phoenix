@@ -1,5 +1,5 @@
 extends CharacterBody2D
-var speed = 20
+var speed = 30
 var damage = 10
 var hits = 4
 var kbpwr = 2000

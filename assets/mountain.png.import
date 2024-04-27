@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cpxbbw2pqivae"
-path="res://.godot/imported/boom.png-348676b7e74496cf436c3077f4b8a5d3.ctex"
+uid="uid://cnrl6sats0gf2"
+path="res://.godot/imported/mountain.png-b2add8ed35f94e98573ad9ba99ceec37.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/boom.png"
-dest_files=["res://.godot/imported/boom.png-348676b7e74496cf436c3077f4b8a5d3.ctex"]
+source_file="res://assets/mountain.png"
+dest_files=["res://.godot/imported/mountain.png-b2add8ed35f94e98573ad9ba99ceec37.ctex"]
 
 [params]
 

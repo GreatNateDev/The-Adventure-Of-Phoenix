@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=4 uid="uid://c70xvk3duuom0"]
+[gd_scene load_steps=21 format=3 uid="uid://c70xvk3duuom0"]
 
 [ext_resource type="Texture2D" uid="uid://c5op31nmtwde6" path="res://assets/phoenix_mov.png" id="1_3kg3w"]
 [ext_resource type="Script" path="res://scripts/phoenix.gd" id="1_ohapw"]
