@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=4 uid="uid://blhupii7e8ong"]
+[gd_scene load_steps=7 format=3 uid="uid://blhupii7e8ong"]
 
 [ext_resource type="Script" path="res://scripts/slime.gd" id="1_6elmv"]
 [ext_resource type="Texture2D" uid="uid://cw75bmq76prwm" path="res://assets/slime.png" id="1_ajkym"]
@@ -70,7 +70,6 @@ position = Vector2(0, 1)
 shape = SubResource("RectangleShape2D_6hk4w")
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 2.0
 one_shot = true
 
 [connection signal="area_entered" from="player_intersector" to="." method="_on_player_intersector_area_entered"]

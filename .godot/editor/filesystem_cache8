@@ -1,6 +1,8 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1713724792
-::res://assets/::1713727225
+::res://::1714252561
+door.gd::GDScript::-1::1713874655::0::1::::<>Area2D<>::
+door.tscn::PackedScene::2563580855080019927::1714155394::0::1::::<><>::res://door.gd<>uid://dbt3upuio4pck::::res://assets/door.png
+::res://assets/::1713727226
 boom.png::CompressedTexture2D::5873218411013407928::1712585605::1713476626::1::::<><>::
 colliding map objs.png::CompressedTexture2D::1799899576909328673::1713724062::1713724063::1::::<><>::
 door.png::CompressedTexture2D::7270410682849720018::1713727225::1713727226::1::::<><>::
@@ -13,12 +15,12 @@ sword_phoenix.png::CompressedTexture2D::862632574319670632::1713488496::17134885
 tileset 1.png::CompressedTexture2D::8814190218966868682::1712585605::1713476653::1::::<><>::
 tileset_grounds.png::CompressedTexture2D::37935967781980425::1713726152::1713726153::1::::<><>::
 tree.png::CompressedTexture2D::1114824187875284871::1713726819::1713726820::1::::<><>::
-::res://scenes/::1713727111
-hyrule.tscn::PackedScene::7147405007478499801::1713727111::0::1::::<><>::uid://c70xvk3duuom0::::res://scenes/phoenix.tscn<>uid://blhupii7e8ong::::res://scenes/slime.tscn<>uid://sm2gvge8wv6::::res://assets/tileset_grounds.png<>uid://0v5c3ayge1q0::::res://assets/colliding map objs.png<>uid://p5a8yf1n1c76::::res://assets/tree.png
-phoenix.tscn::PackedScene::7071928368812225065::1713727111::0::1::::<><>::uid://c5op31nmtwde6::::res://assets/phoenix_mov.png<>res://scripts/phoenix.gd<>uid://mj4ox6xavpkq::::res://assets/sword_phoenix.png
-slime.tscn::PackedScene::3174190168759607488::1713727111::0::1::::<><>::res://scripts/slime.gd<>uid://cw75bmq76prwm::::res://assets/slime.png
-start.tscn::PackedScene::301071119358914406::1713727111::0::1::::<><>::res://scripts/start.gd
+::res://scenes/::1714160774
+hyrule.tscn::PackedScene::7147405007478499801::1714160774::0::1::::<><>::uid://c70xvk3duuom0::::res://scenes/phoenix.tscn<>uid://blhupii7e8ong::::res://scenes/slime.tscn<>uid://sm2gvge8wv6::::res://assets/tileset_grounds.png<>uid://0v5c3ayge1q0::::res://assets/colliding map objs.png<>uid://p5a8yf1n1c76::::res://assets/tree.png<>uid://dbt3upuio4pck::::res://assets/door.png
+phoenix.tscn::PackedScene::7071928368812225065::1714156202::0::1::::<><>::uid://c5op31nmtwde6::::res://assets/phoenix_mov.png<>res://scripts/phoenix.gd<>uid://mj4ox6xavpkq::::res://assets/sword_phoenix.png
+slime.tscn::PackedScene::3174190168759607488::1714156776::0::1::::<><>::res://scripts/slime.gd<>uid://cw75bmq76prwm::::res://assets/slime.png
+start.tscn::PackedScene::301071119358914406::1714156776::0::1::::<><>::res://scripts/start.gd
 ::res://scripts/::1713536787
-phoenix.gd::GDScript::-1::1713536949::0::1::::<>CharacterBody2D<>::
-slime.gd::GDScript::-1::1713722507::0::1::::<>CharacterBody2D<>::
+phoenix.gd::GDScript::-1::1714156314::0::1::::<>CharacterBody2D<>::
+slime.gd::GDScript::-1::1714156775::0::1::::<>CharacterBody2D<>::
 start.gd::GDScript::-1::1713538704::0::1::::<>Node2D<>::
