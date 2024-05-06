@@ -5,3 +5,4 @@ res://scenes/hyrule.tscn
 res://global.gd
 res://scripts/phoenix.gd
 res://scripts/door.gd
+res://scenes/sword_item.gd

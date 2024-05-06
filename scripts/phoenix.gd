@@ -15,6 +15,7 @@ func save():
 	print("save")
 	ResourceSaver.save(playerData,save_file_path+save_file_name)
 func _ready():
+	global.player = self
 	verify_save_directory(save_file_path)
 	if global.just_entered_building == true:
 		load_sav()
