@@ -6,6 +6,7 @@ var mov
 var save_file_path = "user://save/"
 var save_file_name = "Player.tres"
 var playerData = SaveData.new()
+@export var enable_cam = true
 @onready var bar = get_node("CanvasLayer/hpbar")
 func load_sav():
 	print("load")
@@ -18,6 +19,8 @@ func _ready():
 	if global.just_entered_building == true:
 		load_sav()
 		global.just_entered_building = false
+	if enable_cam == false:
+		$cam.enabled = false
 func  verify_save_directory(path):
 	DirAccess.make_dir_absolute(path)
 func _physics_process(_delta):

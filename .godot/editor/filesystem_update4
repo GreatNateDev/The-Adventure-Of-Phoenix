@@ -2,3 +2,8 @@ res://scenes/start.tscn
 res://scripts/door.gd
 res://scenes/door.tscn
 res://global.gd
+res://scenes/sword_item.gd
+res://scripts/phoenix.gd
+res://scenes/sword_cave.tscn
+res://scripts/sword_cave.gd
+res://scenes/phoenix.tscn
