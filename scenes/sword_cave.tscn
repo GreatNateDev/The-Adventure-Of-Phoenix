@@ -58,7 +58,7 @@ sources/0 = SubResource("TileSetAtlasSource_uwwhr")
 radius = 6.08276
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wkwk7"]
-size = Vector2(29.6182, 1.1427)
+size = Vector2(29.6182, 14.5714)
 
 [node name="sword_cave" type="Node2D"]
 
@@ -80,7 +80,7 @@ enable_cam = false
 
 [node name="sword" type="Sprite2D" parent="."]
 texture_filter = 1
-position = Vector2(960, 304)
+position = Vector2(960, 314)
 texture = ExtResource("6_7cs04")
 script = ExtResource("7_72x4y")
 
@@ -111,7 +111,7 @@ text = "Take this!"
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(960, 300)
+position = Vector2(960, 306.714)
 shape = SubResource("RectangleShape2D_wkwk7")
 
 [node name="Door" parent="." instance=ExtResource("9_vgtwt")]

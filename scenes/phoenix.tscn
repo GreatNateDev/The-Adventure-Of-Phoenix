@@ -221,7 +221,7 @@ _data = {
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tyrhs"]
-size = Vector2(12, 23)
+size = Vector2(12, 6)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pjwux"]
 bg_color = Color(0.803922, 0, 0, 1)
@@ -247,7 +247,7 @@ hframes = 16
 frame = 10
 
 [node name="Collission" type="CollisionShape2D" parent="."]
-position = Vector2(0, 0.5)
+position = Vector2(0, 9)
 shape = SubResource("RectangleShape2D_tyrhs")
 
 [node name="cam" type="Camera2D" parent="."]

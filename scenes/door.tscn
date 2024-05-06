@@ -10,10 +10,10 @@ size = Vector2(14, 4)
 script = ExtResource("1_oofuu")
 
 [node name="door_coll" type="CollisionShape2D" parent="."]
-position = Vector2(0, -5)
 shape = SubResource("RectangleShape2D_3faye")
 
 [node name="door_sprite" type="Sprite2D" parent="."]
+z_index = -1
 texture = ExtResource("1_uxc5x")
 
 [node name="trans_time" type="Timer" parent="."]

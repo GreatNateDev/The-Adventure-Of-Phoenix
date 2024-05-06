@@ -1,9 +1,7 @@
 extends Area2D
 @export var area = "null"
-var phoenix = null
 func _on_body_entered(body:Node2D):
 	if body.name == "Phoenix":
-		phoenix = body
 		if area == "sword_cave":
 			global.entering_building = true
 			$trans_time.start()
