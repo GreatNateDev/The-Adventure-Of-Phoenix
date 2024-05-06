@@ -16,14 +16,13 @@ func _physics_process(delta):
 	if $Timer.time_left <= 0.8 and timed == false and not $Timer.time_left <= 0:
 		timed = true
 		self.hide()
-		print("ATTEMPT")
 func _on_player_intersector_body_entered(body):
 	if body.name == "Phoenix":
-		player.hp -= damage
+		player.playerData.hp -= damage
 		knockback("player")
 func _on_player_intersector_area_entered(area:Area2D):
 	if area.name == "sword" and inv == false:
-		hits -= player.power
+		hits -= player.playerData.power
 		inv = true
 		$Timer.start()
 		mov = false

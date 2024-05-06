@@ -283,7 +283,6 @@ zoom = Vector2(3.075, 3.075)
 position_smoothing_speed = 3.0
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
-visible = false
 
 [node name="hpbar" type="ProgressBar" parent="CanvasLayer"]
 offset_right = 140.0
@@ -304,3 +303,9 @@ frame = 2
 position = Vector2(17, 1)
 shape = SubResource("RectangleShape2D_1eyih")
 disabled = true
+
+[node name="sword_cooldown" type="Timer" parent="."]
+wait_time = 0.4
+one_shot = true
+
+[connection signal="timeout" from="sword_cooldown" to="." method="_on_sword_cooldown_timeout"]
