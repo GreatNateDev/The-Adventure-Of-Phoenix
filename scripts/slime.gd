@@ -12,7 +12,6 @@ func _physics_process(delta):
 	if mov == true:
 			velocity = (player.get_global_position() - position).normalized() * speed * delta
 			move_and_collide(velocity)
-			print($Timer.time_left)
 	if $Timer.time_left <= 0.8 and timed == false and not $Timer.time_left <= 0:
 		timed = true
 		self.hide()

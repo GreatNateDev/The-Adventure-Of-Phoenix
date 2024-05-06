@@ -1,3 +1,4 @@
 res://scenes/start.tscn
-res://scenes/sword_cave.tscn
-res://scenes/hyrule.tscn
+res://scripts/door.gd
+res://scenes/door.tscn
+res://global.gd

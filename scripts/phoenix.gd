@@ -8,8 +8,10 @@ var save_file_name = "Player.tres"
 var playerData = SaveData.new()
 @onready var bar = get_node("CanvasLayer/hpbar")
 func load_sav():
+	print("load")
 	playerData = ResourceLoader.load(save_file_path+save_file_name).duplicate(true)
 func save():
+	print("save")
 	ResourceSaver.save(playerData,save_file_path+save_file_name)
 func _ready():
 	verify_save_directory(save_file_path)
@@ -89,3 +91,8 @@ func sword():
 	move = true
 func _on_sword_cooldown_timeout():
 	cool = false
+func _process(_delta):
+	if Input.is_action_just_pressed("dbg"):
+		save()
+	if Input.is_action_just_pressed("dbg2"):
+		load_sav()
