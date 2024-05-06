@@ -27,6 +27,9 @@ func _physics_process(_delta):
 	if global.entering_building == true:
 		save()
 		global.entering_building = false
+	if global.tp_pos != Vector2(0,0):
+		self.position = global.tp_pos
+		global.tp_pos = Vector2(0,0)
 	bar.value = playerData.hp
 	var x = Input.get_action_strength("right") - Input.get_action_strength("left")
 	var y = Input.get_action_strength("down") - Input.get_action_strength("up")

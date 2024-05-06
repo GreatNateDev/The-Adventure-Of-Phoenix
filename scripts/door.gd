@@ -19,5 +19,6 @@ func _on_trans_time_timeout():
 	elif area == "b_sword_cave":
 		get_tree().change_scene_to_file("res://scenes/hyrule.tscn")
 		global.just_entered_building = true
+		global.tp_pos = Vector2(4380,4055)
 		
 		
