@@ -1,1 +1,4 @@
 res://scenes/sword_cave.tscn
+res://scenes/start.tscn
+res://scripts/phoenix.gd
+res://scenes/hyrule.tscn
