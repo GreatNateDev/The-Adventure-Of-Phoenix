@@ -7,14 +7,14 @@ var save_file_path = "user://save/"
 var save_file_name = "Player.tres"
 var playerData = SaveData.new()
 @onready var bar = get_node("CanvasLayer/hpbar")
-func load():
+func load_sav():
 	playerData = ResourceLoader.load(save_file_path+save_file_name).duplicate(true)
 func save():
 	ResourceSaver.save(playerData,save_file_path+save_file_name)
 func _ready():
 	verify_save_directory(save_file_path)
 	if global.just_entered_building == true:
-		load("test")
+		load_sav()
 		global.just_entered_building = false
 func  verify_save_directory(path):
 	DirAccess.make_dir_absolute(path)
