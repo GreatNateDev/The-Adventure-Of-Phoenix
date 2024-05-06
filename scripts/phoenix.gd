@@ -14,10 +14,14 @@ func save():
 func _ready():
 	verify_save_directory(save_file_path)
 	if global.just_entered_building == true:
-		load()
+		load("test")
+		global.just_entered_building = false
 func  verify_save_directory(path):
 	DirAccess.make_dir_absolute(path)
 func _physics_process(_delta):
+	if global.entering_building == true:
+		save()
+		global.entering_building = false
 	bar.value = playerData.hp
 	var x = Input.get_action_strength("right") - Input.get_action_strength("left")
 	var y = Input.get_action_strength("down") - Input.get_action_strength("up")

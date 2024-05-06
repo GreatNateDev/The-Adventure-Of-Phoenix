@@ -4,6 +4,8 @@ extends Area2D
 func _on_body_entered(body:Node2D):
 	if body.name == "Phoenix":
 		if area == "sword_cave":
+			global.entering_building = true
+			get_tree().create_timer(1).timeout
 			get_tree().change_scene_to_file("res://scenes/sword_cave.tscn")
 			global.just_entered_building = true
 		elif area == "sub_1":

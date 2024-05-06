@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://c83iyl7qhuffl"]
+[gd_scene load_steps=13 format=3 uid="uid://c83iyl7qhuffl"]
 
 [ext_resource type="PackedScene" uid="uid://c70xvk3duuom0" path="res://scenes/phoenix.tscn" id="1_e5orw"]
 [ext_resource type="Texture2D" uid="uid://cnrl6sats0gf2" path="res://assets/mountain.png" id="3_04sh3"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://0v5c3ayge1q0" path="res://assets/colliding map objs.png" id="4_dcs4v"]
 [ext_resource type="Texture2D" uid="uid://p5a8yf1n1c76" path="res://assets/tree.png" id="5_vpotw"]
 [ext_resource type="PackedScene" uid="uid://bcr22jjjwabxf" path="res://scenes/door.tscn" id="6_fu7yu"]
+[ext_resource type="PackedScene" uid="uid://blhupii7e8ong" path="res://scenes/slime.tscn" id="7_1afva"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ythap"]
 texture = ExtResource("3_04sh3")
@@ -72,3 +73,6 @@ position = Vector2(3212, 4553)
 texture_filter = 1
 position = Vector2(4380, 4045)
 area = "sword_cave"
+
+[node name="slime" parent="." instance=ExtResource("7_1afva")]
+position = Vector2(3277.54, 4551.99)
