@@ -1,10 +1,2 @@
 res://scenes/hyrule.tscn
 res://scenes/slime.tscn
-res://scripts/green_ruppee.gd
-res://scenes/green_ruppee.tscn
-res://save.gd
-res://scripts/door.gd
-res://scenes/bomb_cave.tscn
-res://scripts/bomb_item.gd
-res://scenes/sword_cave.tscn
-res://scenes/phoenix.tscn
