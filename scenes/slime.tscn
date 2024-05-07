@@ -74,7 +74,6 @@ one_shot = true
 libraries = {
 "": SubResource("AnimationLibrary_jlep8")
 }
-autoplay = "slime"
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1

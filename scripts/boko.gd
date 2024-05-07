@@ -1,7 +1,7 @@
 extends CharacterBody2D
-var speed = 30
-var damage = 10
-var hits = 4
+var speed = 50
+var damage = 20
+var hits = 6
 var kbpwr = 2000
 var take_kb = false
 var timed = false
@@ -48,10 +48,6 @@ func damagee():
 	$Sprite2D.modulate = default
 func _on_timer_timeout():
 	mov = true
-func _ready():
-	start_anim = randi_range(1,6)
-	await get_tree().create_timer(start_anim).timeout
-	$AnimationPlayer.play("slime")
 	
 	
 	
