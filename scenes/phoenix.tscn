@@ -277,7 +277,7 @@ shape = SubResource("RectangleShape2D_1eyih")
 disabled = true
 
 [node name="sword_cooldown" type="Timer" parent="."]
-wait_time = 0.4
+wait_time = 0.3
 one_shot = true
 
 [connection signal="timeout" from="sword_cooldown" to="." method="_on_sword_cooldown_timeout"]
