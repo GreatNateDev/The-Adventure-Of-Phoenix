@@ -3,6 +3,15 @@
 [ext_resource type="Script" path="res://scripts/slime.gd" id="1_6elmv"]
 [ext_resource type="Texture2D" uid="uid://cw75bmq76prwm" path="res://assets/slime.png" id="1_ajkym"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t0k4c"]
+size = Vector2(10, 10)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6hk4w"]
+size = Vector2(10, 10)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_iiuix"]
+radius = 142.032
+
 [sub_resource type="Animation" id="Animation_iqulp"]
 resource_name = "slime"
 length = 2.37
@@ -37,31 +46,9 @@ _data = {
 "slime": SubResource("Animation_iqulp")
 }
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_t0k4c"]
-size = Vector2(10, 10)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_6hk4w"]
-size = Vector2(10, 10)
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_iiuix"]
-radius = 142.032
-
 [node name="slime" type="CharacterBody2D"]
 motion_mode = 1
 script = ExtResource("1_6elmv")
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-libraries = {
-"": SubResource("AnimationLibrary_jlep8")
-}
-autoplay = "slime"
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture_filter = 1
-position = Vector2(0, -10.0714)
-texture = ExtResource("1_ajkym")
-hframes = 3
-frame = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 1)
@@ -74,16 +61,29 @@ shape = SubResource("RectangleShape2D_t0k4c")
 position = Vector2(0, 1)
 shape = SubResource("RectangleShape2D_6hk4w")
 
-[node name="Timer" type="Timer" parent="."]
-one_shot = true
-
 [node name="sight" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="sight"]
 shape = SubResource("CircleShape2D_iiuix")
 
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.663
+one_shot = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_jlep8")
+}
+autoplay = "slime"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("1_ajkym")
+hframes = 3
+frame = 1
+
 [connection signal="area_entered" from="player_intersector" to="." method="_on_player_intersector_area_entered"]
 [connection signal="body_entered" from="player_intersector" to="." method="_on_player_intersector_body_entered"]
-[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="body_entered" from="sight" to="." method="_on_sight_body_entered"]
 [connection signal="body_exited" from="sight" to="." method="_on_sight_body_exited"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

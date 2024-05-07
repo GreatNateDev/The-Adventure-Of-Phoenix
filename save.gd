@@ -4,4 +4,4 @@ class_name SaveData
 @export var speed = 200
 @export var power = 1
 @export var save_pos : Vector2
-@export var has_sword = false
+@export var has_sword = true
