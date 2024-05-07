@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://c83iyl7qhuffl"]
+[gd_scene load_steps=23 format=3 uid="uid://c83iyl7qhuffl"]
 
 [ext_resource type="PackedScene" uid="uid://c70xvk3duuom0" path="res://scenes/phoenix.tscn" id="1_e5orw"]
 [ext_resource type="Texture2D" uid="uid://cgd3jad8ugkis" path="res://assets/trash.png" id="2_pthhr"]
@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://tccbl1glwg1l" path="res://assets/water_splash.png" id="7_5jime"]
 [ext_resource type="Texture2D" uid="uid://dgbv03a6oty2v" path="res://assets/flowers_brown.png" id="8_4tsec"]
 [ext_resource type="PackedScene" uid="uid://n2wif2quir2t" path="res://scenes/green_ruppee.tscn" id="8_uy1br"]
+[ext_resource type="Texture2D" uid="uid://g7o0fxcgdq3c" path="res://assets/yellow_squirrel.png" id="13_sb6xp"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ri7a4"]
 texture = ExtResource("3_04sh3")
@@ -206,3 +207,16 @@ position = Vector2(3947.56, 3843.52)
 texture_filter = 1
 position = Vector2(4748, 3133)
 area = "bomb_cave"
+
+[node name="YellowSquirrel" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(2765, 3832)
+texture = ExtResource("13_sb6xp")
+
+[node name="yellow_sqrl_txt" type="Label" parent="."]
+offset_left = 2747.0
+offset_top = 3852.0
+offset_right = 2854.0
+offset_bottom = 3875.0
+scale = Vector2(0.3, 0.3)
+text = "Cant get me :)"
