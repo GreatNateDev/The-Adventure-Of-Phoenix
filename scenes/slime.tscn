@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://blhupii7e8ong"]
+[gd_scene load_steps=8 format=3 uid="uid://blhupii7e8ong"]
 
 [ext_resource type="Script" path="res://scripts/slime.gd" id="1_6elmv"]
 [ext_resource type="Texture2D" uid="uid://cw75bmq76prwm" path="res://assets/slime.png" id="1_ajkym"]
@@ -43,6 +43,9 @@ size = Vector2(10, 10)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6hk4w"]
 size = Vector2(10, 10)
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_iiuix"]
+radius = 142.032
+
 [node name="slime" type="CharacterBody2D"]
 motion_mode = 1
 script = ExtResource("1_6elmv")
@@ -74,6 +77,13 @@ shape = SubResource("RectangleShape2D_6hk4w")
 [node name="Timer" type="Timer" parent="."]
 one_shot = true
 
+[node name="sight" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="sight"]
+shape = SubResource("CircleShape2D_iiuix")
+
 [connection signal="area_entered" from="player_intersector" to="." method="_on_player_intersector_area_entered"]
 [connection signal="body_entered" from="player_intersector" to="." method="_on_player_intersector_body_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="body_entered" from="sight" to="." method="_on_sight_body_entered"]
+[connection signal="body_exited" from="sight" to="." method="_on_sight_body_exited"]

@@ -75,4 +75,22 @@ position = Vector2(4380, 4045)
 area = "sword_cave"
 
 [node name="slime" parent="." instance=ExtResource("7_1afva")]
-position = Vector2(3277.54, 4551.99)
+position = Vector2(3738.61, 4685.73)
+
+[node name="slime2" parent="." instance=ExtResource("7_1afva")]
+position = Vector2(4702, 4825)
+
+[node name="slime3" parent="." instance=ExtResource("7_1afva")]
+position = Vector2(4181, 4417)
+
+[node name="slime4" parent="." instance=ExtResource("7_1afva")]
+position = Vector2(3526, 4088)
+
+[node name="slime5" parent="." instance=ExtResource("7_1afva")]
+position = Vector2(4588, 3869)
+
+[node name="slime6" parent="." instance=ExtResource("7_1afva")]
+position = Vector2(3062, 4224)
+
+[node name="slime7" parent="." instance=ExtResource("7_1afva")]
+position = Vector2(2952, 3790)

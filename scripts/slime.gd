@@ -6,7 +6,7 @@ var kbpwr = 2000
 var take_kb = false
 var inv = false
 var timed = false
-var mov = true
+var mov = false
 @onready var player = get_parent().get_node("Phoenix")
 func _physics_process(delta):
 	if mov == true:
@@ -37,3 +37,13 @@ func _on_timer_timeout():
 	timed = false
 	mov = true
 	self.show()
+
+
+func _on_sight_body_entered(body):
+	if body.name == "Phoenix":
+		mov = true
+
+
+func _on_sight_body_exited(body):
+	if body.name == "Phoenix":
+		mov = false

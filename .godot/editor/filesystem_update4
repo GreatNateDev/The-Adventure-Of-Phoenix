@@ -1,8 +1,4 @@
-res://scenes/sword_cave.tscn
-res://scenes/phoenix.tscn
-res://scenes/door.tscn
+res://scripts/slime.gd
+res://scenes/slime.tscn
 res://scenes/hyrule.tscn
-res://global.gd
-res://scripts/phoenix.gd
 res://scripts/door.gd
-res://scenes/sword_item.gd
