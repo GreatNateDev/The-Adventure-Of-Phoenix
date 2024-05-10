@@ -30,7 +30,6 @@ func knockback(who):
 			var kbdir = (velocity - Vector2(0,0)).normalized() *kbpwr
 			player.velocity = kbdir
 			player.move_and_slide()
-#sight
 func _on_sight_body_entered(body):
 	if body.name == "Phoenix":
 		mov = true
@@ -52,7 +51,3 @@ func _ready():
 	start_anim = randi_range(1,6)
 	await get_tree().create_timer(start_anim).timeout
 	$AnimationPlayer.play("slime")
-	
-	
-	
-	

@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://bv1ok44ncogs0"]
+[gd_scene load_steps=18 format=3 uid="uid://bv1ok44ncogs0"]
 
 [ext_resource type="Script" path="res://scripts/boko.gd" id="1_fmi13"]
 [ext_resource type="Texture2D" uid="uid://jpi082ieeukm" path="res://assets/boko.png" id="2_jpt7a"]
@@ -20,38 +20,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [5, 4]
-}
-
-[sub_resource type="Animation" id="Animation_xm778"]
-resource_name = "idle_up"
-length = 0.4
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("boko_sprite:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0.0333, 0.1665),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [6, 7]
-}
-
-[sub_resource type="Animation" id="Animation_ljnre"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("boko_sprite:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [7]
 }
 
 [sub_resource type="Animation" id="Animation_p7upv"]
@@ -88,6 +56,23 @@ tracks/0/keys = {
 "values": [0, 2]
 }
 
+[sub_resource type="Animation" id="Animation_xm778"]
+resource_name = "idle_up"
+length = 0.4
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("boko_sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0333, 0.1665),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [6, 7]
+}
+
 [sub_resource type="Animation" id="Animation_hwy3q"]
 resource_name = "walk_down"
 length = 0.4
@@ -104,6 +89,10 @@ tracks/0/keys = {
 "update": 1,
 "values": [10, 14]
 }
+
+[sub_resource type="Animation" id="Animation_a5cg8"]
+resource_name = "walk_left"
+length = 0.4
 
 [sub_resource type="Animation" id="Animation_wtmix"]
 resource_name = "walk_up"
@@ -122,19 +111,116 @@ tracks/0/keys = {
 "values": [11, 15]
 }
 
-[sub_resource type="Animation" id="Animation_a5cg8"]
-resource_name = "walk_left"
+[sub_resource type="Animation" id="Animation_arqnh"]
+resource_name = "walk_right"
 length = 0.4
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("boko_sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1332),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [12, 16]
+}
+
+[sub_resource type="Animation" id="Animation_px25y"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("boko_sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [16]
+}
+
+[sub_resource type="Animation" id="Animation_houg5"]
+resource_name = "attack_left"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("boko_sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [17]
+}
+
+[sub_resource type="Animation" id="Animation_4k31v"]
+resource_name = "attack_right"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("boko_sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0333),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [16]
+}
+
+[sub_resource type="Animation" id="Animation_04shb"]
+resource_name = "attack_down"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("boko_sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [18]
+}
+
+[sub_resource type="Animation" id="Animation_u5i21"]
+resource_name = "attack_up"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("boko_sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [19]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_tj0oy"]
 _data = {
-"RESET": SubResource("Animation_ljnre"),
+"RESET": SubResource("Animation_px25y"),
+"attack_down": SubResource("Animation_04shb"),
+"attack_left": SubResource("Animation_houg5"),
+"attack_right": SubResource("Animation_4k31v"),
+"attack_up": SubResource("Animation_u5i21"),
 "idle_down": SubResource("Animation_ant08"),
 "idle_left": SubResource("Animation_p7upv"),
 "idle_right": SubResource("Animation_d307y"),
 "idle_up": SubResource("Animation_xm778"),
 "walk_down": SubResource("Animation_hwy3q"),
 "walk_left": SubResource("Animation_a5cg8"),
+"walk_right": SubResource("Animation_arqnh"),
 "walk_up": SubResource("Animation_wtmix")
 }
 
@@ -148,7 +234,7 @@ shape = SubResource("RectangleShape2D_r2cbs")
 texture_filter = 1
 texture = ExtResource("2_jpt7a")
 hframes = 20
-frame = 7
+frame = 16
 
 [node name="Animation" type="AnimationPlayer" parent="."]
 libraries = {
