@@ -1,7 +1,7 @@
 extends CharacterBody2D
-var speed = 50
-var damage = 20
-var hits = 6
+var speed = 30
+var damage = 10
+var hits = 4
 var kbpwr = 2000
 var take_kb = false
 var timed = false
@@ -30,7 +30,6 @@ func knockback(who):
 			var kbdir = (velocity - Vector2(0,0)).normalized() *kbpwr
 			player.velocity = kbdir
 			player.move_and_slide()
-#sight
 func _on_sight_body_entered(body):
 	if body.name == "Phoenix":
 		mov = true
@@ -48,7 +47,6 @@ func damagee():
 	$Sprite2D.modulate = default
 func _on_timer_timeout():
 	mov = true
-	
-	
-	
-	
+func _ready():
+	start_anim = randi_range(1,6)
+	await get_tree().create_timer(start_anim).timeout

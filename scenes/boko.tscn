@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://bv1ok44ncogs0"]
+[gd_scene load_steps=20 format=3 uid="uid://bv1ok44ncogs0"]
 
 [ext_resource type="Script" path="res://scripts/boko.gd" id="1_fmi13"]
 [ext_resource type="Texture2D" uid="uid://jpi082ieeukm" path="res://assets/boko.png" id="2_jpt7a"]
@@ -224,7 +224,14 @@ _data = {
 "walk_up": SubResource("Animation_wtmix")
 }
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qv7fy"]
+size = Vector2(10, 10)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_pfa8r"]
+radius = 76.0066
+
 [node name="boko" type="CharacterBody2D"]
+motion_mode = 1
 script = ExtResource("1_fmi13")
 
 [node name="coll" type="CollisionShape2D" parent="."]
@@ -240,3 +247,19 @@ frame = 16
 libraries = {
 "": SubResource("AnimationLibrary_tj0oy")
 }
+
+[node name="player_intersector" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="player_intersector"]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_qv7fy")
+
+[node name="sight" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="sight"]
+shape = SubResource("CircleShape2D_pfa8r")
+
+[connection signal="area_entered" from="player_intersector" to="." method="_on_player_intersector_area_entered"]
+[connection signal="body_entered" from="player_intersector" to="." method="_on_player_intersector_body_entered"]
+[connection signal="body_entered" from="sight" to="." method="_on_sight_body_entered"]
+[connection signal="body_exited" from="sight" to="." method="_on_sight_body_exited"]
