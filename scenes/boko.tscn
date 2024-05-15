@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://jpi082ieeukm" path="res://assets/boko.png" id="2_jpt7a"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r2cbs"]
+size = Vector2(8, 8)
 
 [sub_resource type="Animation" id="Animation_px25y"]
 length = 0.001
@@ -225,7 +226,7 @@ _data = {
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qv7fy"]
-size = Vector2(10, 10)
+size = Vector2(16, 22)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_pfa8r"]
 radius = 76.0066
@@ -251,7 +252,7 @@ libraries = {
 [node name="player_intersector" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="player_intersector"]
-position = Vector2(0, 1)
+position = Vector2(-1, 0)
 shape = SubResource("RectangleShape2D_qv7fy")
 
 [node name="sight" type="Area2D" parent="."]

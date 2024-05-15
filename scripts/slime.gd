@@ -12,7 +12,7 @@ var start_anim : int
 @onready var player = get_parent().get_parent().get_node("Phoenix")
 func _physics_process(delta):
 	if mov == true:
-			velocity = (player.get_global_position() - position).normalized() * speed * delta
+			velocity = (player.get_global_position() - self.global_position).normalized() * speed * delta
 			move_and_collide(velocity)
 func _on_player_intersector_body_entered(body):
 	if body.name == "Phoenix":

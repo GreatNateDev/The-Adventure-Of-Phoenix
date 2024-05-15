@@ -25,6 +25,7 @@ func _ready():
 func  verify_save_directory(path):
 	DirAccess.make_dir_absolute(path)
 func _physics_process(_delta):
+	print(playerData.ruppees)
 	if global.entering_building == true:
 		save()
 		global.entering_building = false

@@ -1,7 +1,7 @@
 extends CharacterBody2D
 var speed = 30
-var damage = 10
-var hits = 4
+var damage = 20
+var hits = 8
 var kbpwr = 2000
 var take_kb = false
 var timed = false
@@ -11,8 +11,17 @@ var dam = Color.RED
 @onready var player = get_parent().get_parent().get_node("Phoenix")
 func _physics_process(delta):
 	if mov == true:
-			velocity = (player.get_global_position() - position).normalized() * speed * delta
+			velocity = (player.get_global_position() - self.global_position).normalized() * speed * delta
+			velocity = velocity.normalized()
 			move_and_collide(velocity)
+	if velocity.x<=.01:
+		$Animation.play("walk_right")
+	elif velocity.x <= .01:
+		$Animation.play("walk_left")
+	elif velocity.y >= .01:
+		$Animation.play("walk_up")
+	elif velocity.y >=.01:
+		$Animation.play("walk_down")
 func _on_player_intersector_body_entered(body):
 	if body.name == "Phoenix":
 		player.playerData.hp -= damage
@@ -46,3 +55,4 @@ func damagee():
 	$boko_sprite.modulate = default
 func _on_timer_timeout():
 	mov = true
+#BIG TODO FIX BOKO ANIMATIONS STAT

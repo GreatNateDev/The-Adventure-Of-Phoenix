@@ -1,10 +1,11 @@
-Timer
+CollisionShape2D
+Area2D
+AudioStreamPlayer2D
 AnimationPlayer
 Sprite2D
-CollisionShape2D
+Timer
 CharacterBody2D
 Label
-Area2D
 StaticBody2D
 Camera2D
 Node2D

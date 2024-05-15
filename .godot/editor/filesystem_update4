@@ -4,3 +4,8 @@ res://scenes/boko.tscn
 res://scenes/phoenix.tscn
 res://scripts/boko.gd
 res://scripts/slime.gd
+res://chest.tscn
+res://scenes/chest.tscn
+res://scripts/chest.gd
+res://scenes/green_ruppee.tscn
+res://scripts/phoenix.gd
