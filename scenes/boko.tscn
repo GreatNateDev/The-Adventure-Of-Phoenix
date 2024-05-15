@@ -1,7 +1,7 @@
 [gd_scene load_steps=20 format=3 uid="uid://bv1ok44ncogs0"]
 
 [ext_resource type="Script" path="res://scripts/boko.gd" id="1_fmi13"]
-[ext_resource type="Texture2D" uid="uid://jpi082ieeukm" path="res://assets/boko.png" id="2_jpt7a"]
+[ext_resource type="Texture2D" uid="uid://jpi082ieeukm" path="res://assets/entitys/boko.png" id="2_jpt7a"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r2cbs"]
 size = Vector2(8, 8)

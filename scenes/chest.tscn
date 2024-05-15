@@ -1,24 +1,8 @@
 [gd_scene load_steps=9 format=3 uid="uid://7v86hmodry6r"]
 
-[ext_resource type="Texture2D" uid="uid://b3hlalul1maoa" path="res://assets/chest_sheet.png" id="1_w2822"]
+[ext_resource type="Texture2D" uid="uid://b3hlalul1maoa" path="res://assets/world_tilesets/chest_sheet.png" id="1_w2822"]
 [ext_resource type="Script" path="res://scripts/chest.gd" id="2_d2vfb"]
-[ext_resource type="AudioStream" uid="uid://dm7k0s7vn7mwq" path="res://assets/chest_sfx.mp3" id="2_hyyuv"]
-
-[sub_resource type="Animation" id="Animation_c7guo"]
-resource_name = "open"
-length = 0.5
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0.0333, 0.233333),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [1, 0]
-}
+[ext_resource type="AudioStream" uid="uid://dm7k0s7vn7mwq" path="res://assets/sfx/chest_sfx.mp3" id="2_hyyuv"]
 
 [sub_resource type="Animation" id="Animation_adojh"]
 length = 0.001
@@ -48,6 +32,22 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [1]
+}
+
+[sub_resource type="Animation" id="Animation_c7guo"]
+resource_name = "open"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0333, 0.233333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [1, 0]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_7f1fd"]

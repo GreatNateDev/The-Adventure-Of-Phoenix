@@ -1,8 +1,8 @@
 [gd_scene load_steps=20 format=3 uid="uid://c70xvk3duuom0"]
 
-[ext_resource type="Texture2D" uid="uid://c5op31nmtwde6" path="res://assets/phoenix_mov.png" id="1_3kg3w"]
+[ext_resource type="Texture2D" uid="uid://c5op31nmtwde6" path="res://assets/entitys/phoenix_mov.png" id="1_3kg3w"]
 [ext_resource type="Script" path="res://scripts/phoenix.gd" id="1_ohapw"]
-[ext_resource type="Texture2D" uid="uid://mj4ox6xavpkq" path="res://assets/sword_phoenix.png" id="3_peeuq"]
+[ext_resource type="Texture2D" uid="uid://mj4ox6xavpkq" path="res://assets/entitys/sword_phoenix.png" id="3_peeuq"]
 
 [sub_resource type="Animation" id="Animation_j8tae"]
 resource_name = "idle_down"

@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://n2wif2quir2t"]
 
-[ext_resource type="Texture2D" uid="uid://codidklktm5r5" path="res://assets/green_ruppee.png" id="1_ep8l4"]
+[ext_resource type="Texture2D" uid="uid://codidklktm5r5" path="res://assets/ruppees/green_ruppee.png" id="1_ep8l4"]
 [ext_resource type="Script" path="res://scripts/green_ruppee.gd" id="2_ak4os"]
 
 [sub_resource type="Animation" id="Animation_cuu0h"]
