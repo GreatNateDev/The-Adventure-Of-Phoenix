@@ -1,0 +1,65 @@
+[gd_scene load_steps=7 format=3 uid="uid://d01r5d0kpkv78"]
+
+[ext_resource type="Texture2D" uid="uid://dn05gaq0uhurw" path="res://assets/ruppees/purple_ruppee.png" id="1_bvgx4"]
+[ext_resource type="Script" path="res://scripts/purple_ruppee.gd" id="2_ybdkw"]
+
+[sub_resource type="Animation" id="Animation_cuu0h"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+
+[sub_resource type="Animation" id="Animation_4n3hp"]
+resource_name = "green_ruppee"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.0873362, 0.2997, 0.4662, 0.6327),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [1, 2, 0, 2, 1]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_kyphb"]
+_data = {
+"RESET": SubResource("Animation_cuu0h"),
+"purple_ruppee": SubResource("Animation_4n3hp")
+}
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_l8vj0"]
+radius = 7.0
+
+[node name="purple_ruppee" type="Sprite2D"]
+z_index = 3
+texture_filter = 1
+texture = ExtResource("1_bvgx4")
+hframes = 3
+frame = 1
+script = ExtResource("2_ybdkw")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_kyphb")
+}
+autoplay = "purple_ruppee"
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_l8vj0")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
