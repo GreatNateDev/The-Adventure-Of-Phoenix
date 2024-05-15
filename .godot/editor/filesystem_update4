@@ -2,5 +2,5 @@ res://scenes/hyrule.tscn
 res://scenes/slime.tscn
 res://scenes/boko.tscn
 res://scenes/phoenix.tscn
-res://scripts/slime.gd
 res://scripts/boko.gd
+res://scripts/slime.gd

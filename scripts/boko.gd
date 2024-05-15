@@ -8,7 +8,6 @@ var timed = false
 var mov = false
 var default = self.modulate
 var dam = Color.RED
-var start_anim : int
 @onready var player = get_parent().get_parent().get_node("Phoenix")
 func _physics_process(delta):
 	if mov == true:
@@ -38,15 +37,12 @@ func _on_sight_body_exited(body):
 		mov = false
 func damagee():
 	$Timer.start()
-	$Sprite2D.modulate = dam
+	$boko_sprite.modulate = dam
 	await get_tree().create_timer(.3).timeout
-	$Sprite2D.modulate = default
+	$boko_sprite.modulate = default
 	await get_tree().create_timer(.3).timeout
-	$Sprite2D.modulate = dam
+	$boko_sprite.modulate = dam
 	await get_tree().create_timer(.3).timeout
-	$Sprite2D.modulate = default
+	$boko_sprite.modulate = default
 func _on_timer_timeout():
 	mov = true
-func _ready():
-	start_anim = randi_range(1,6)
-	await get_tree().create_timer(start_anim).timeout
