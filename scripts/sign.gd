@@ -4,7 +4,7 @@ var player = null
 func _on_area_2d_body_entered(body):
 	if body.name == "Phoenix":
 		player = body
-func _process(delta):
+func _process(_delta):
 	if player != null:
 		if Input.is_action_just_pressed("sword"):
 			$Label.text = sign_text

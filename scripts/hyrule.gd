@@ -6,6 +6,6 @@ func _ready():
 		
 
 
-func _on_first_start_animation_finished(anim_name):
+func _on_first_start_animation_finished(_anim_name):
 	$Phoenix.cancel_mov = false
 	$Phoenix.playerData.first_start = false

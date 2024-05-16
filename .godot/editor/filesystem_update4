@@ -1,7 +1,4 @@
 res://scenes/hyrule.tscn
-res://scripts/slime.gd
-res://scenes/sign.tscn
-res://scripts/sign.gd
-res://addons/asset_dock/asset_dock.gd
-res://scripts/hyrule.gd
 res://scripts/save.gd
+res://scripts/hyrule.gd
+res://scripts/sign.gd
