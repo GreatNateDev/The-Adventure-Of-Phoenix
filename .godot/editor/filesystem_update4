@@ -1,8 +1,7 @@
 res://scenes/hyrule.tscn
-res://scenes/sign.tscn
-res://scenes/death_screen.tscn
 res://scenes/phoenix.tscn
-res://scripts/phoenix.gd
-res://scripts/death_screen.gd
-res://scripts/boko.gd
-res://scripts/global.gd
+res://scenes/heart.tscn
+res://scripts/heart.gd
+res://scenes/slime.tscn
+res://scripts/slime.gd
+res://scripts/save.gd

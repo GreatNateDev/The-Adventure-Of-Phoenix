@@ -25,6 +25,14 @@ func _on_player_intersector_area_entered(area:Area2D):
 		damagee()
 		mov = false
 		if hits <= 0:
+			var heart = randi_range(0,1)
+			if heart == 1:
+				var spawn_heart = preload("res://scenes/heart.tscn")
+				var h = spawn_heart.instantiate()
+				get_parent().add_child(h)
+				h.position = self.position
+			else:
+				pass
 			self.queue_free()
 func knockback(who):
 	if who == "player":
