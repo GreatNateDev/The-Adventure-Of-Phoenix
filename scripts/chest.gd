@@ -4,7 +4,7 @@ var item_for_func : PackedScene
 var player = null
 var opened = true
 var spawned = false
-func _physics_process(delta):
+func _physics_process(_delta):
 	if item == "green_ruppee":
 		item_for_func = preload("res://scenes/green_ruppee.tscn")
 	elif item == "blue_ruppee":

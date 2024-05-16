@@ -285,4 +285,8 @@ one_shot = true
 stream = ExtResource("4_3glpl")
 max_distance = 1e+07
 
+[node name="death_await" type="Timer" parent="."]
+one_shot = true
+
 [connection signal="timeout" from="sword_cooldown" to="." method="_on_sword_cooldown_timeout"]
+[connection signal="timeout" from="death_await" to="." method="_on_death_await_timeout"]

@@ -14,13 +14,13 @@ func load_sav():
 func save():
 	ResourceSaver.save(playerData,save_file_path+save_file_name)
 func _ready():
-	if global.need_heal == true:
-		playerData.hp = 100
-		global.need_heal = false
 	global.player = self
 	verify_save_directory(save_file_path)
 	if global.just_entered_building == true:
 		load_sav()
+		if global.need_heal == true:
+			playerData.hp = 100
+			global.need_heal = false
 		global.just_entered_building = false
 	if enable_cam == false:
 		$cam.enabled = false
@@ -111,12 +111,18 @@ func _on_sword_cooldown_timeout():
 	cool = false
 func _process(_delta):
 	if Input.is_action_just_pressed("dbg"):
-		save()
+		die()
 	if Input.is_action_just_pressed("dbg2"):
 		load_sav()
 func die():
-	if global.need_heal == false:
+	if global.need_heal == false and global.dead == false:
+		global.dead = true
+		print("rn")
 		global.respawn_pos = self.position
 		global.entering_building = true
-		await get_tree().create_timer(1).timeout
-		get_tree().change_scene_to_file("res://scenes/death_screen.tscn")
+		$death_await.start()
+		print($death_await.time_left)
+
+
+func _on_death_await_timeout():
+	get_tree().change_scene_to_file("res://scenes/death_screen.tscn")
