@@ -2,6 +2,7 @@ extends Sprite2D
 
 func _ready():
 	global.need_to_lose_100_ruppees = false
+	$Label2.text = "Ruppees: " + str(global.ruppees) 
 func _on_button_pressed():
 	global.need_heal = true
 	global.need_to_lose_100_ruppees = true

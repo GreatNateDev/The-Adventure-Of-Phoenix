@@ -1,7 +1,8 @@
-[gd_scene load_steps=21 format=3 uid="uid://c70xvk3duuom0"]
+[gd_scene load_steps=22 format=3 uid="uid://c70xvk3duuom0"]
 
 [ext_resource type="Texture2D" uid="uid://c5op31nmtwde6" path="res://assets/entitys/phoenix_mov.png" id="1_3kg3w"]
 [ext_resource type="Script" path="res://scripts/phoenix.gd" id="1_ohapw"]
+[ext_resource type="PackedScene" uid="uid://n2wif2quir2t" path="res://scenes/green_ruppee.tscn" id="3_p7uxn"]
 [ext_resource type="Texture2D" uid="uid://mj4ox6xavpkq" path="res://assets/entitys/sword_phoenix.png" id="3_peeuq"]
 [ext_resource type="AudioStream" uid="uid://dfdo45swjxy1j" path="res://assets/sfx/sword_swing.mp3" id="4_3glpl"]
 
@@ -252,7 +253,7 @@ position = Vector2(0, 9)
 shape = SubResource("RectangleShape2D_tyrhs")
 
 [node name="cam" type="Camera2D" parent="."]
-zoom = Vector2(3.075, 3.075)
+zoom = Vector2(5, 5)
 position_smoothing_speed = 3.0
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
@@ -262,6 +263,17 @@ offset_right = 140.0
 offset_bottom = 27.0
 theme_override_styles/fill = SubResource("StyleBoxFlat_pjwux")
 show_percentage = false
+
+[node name="green_ruppee" parent="CanvasLayer" instance=ExtResource("3_p7uxn")]
+position = Vector2(1580, 25)
+scale = Vector2(5, 5)
+
+[node name="ruppee counter" type="Label" parent="CanvasLayer"]
+offset_left = 1460.0
+offset_top = 14.0
+offset_right = 1536.0
+offset_bottom = 37.0
+text = "Ruppees: "
 
 [node name="sword_sprite" type="Sprite2D" parent="."]
 visible = false

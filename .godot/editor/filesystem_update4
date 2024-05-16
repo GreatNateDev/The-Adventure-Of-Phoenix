@@ -5,3 +5,4 @@ res://scenes/phoenix.tscn
 res://scripts/phoenix.gd
 res://scripts/death_screen.gd
 res://scripts/boko.gd
+res://scripts/global.gd

@@ -7,3 +7,4 @@ var need_to_lose_100_ruppees = false
 var respawn_pos : Vector2
 var need_heal = false
 var dead = false
+var ruppees :int
