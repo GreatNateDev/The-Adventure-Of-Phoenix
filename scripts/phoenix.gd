@@ -27,7 +27,7 @@ func _ready():
 func  verify_save_directory(path):
 	DirAccess.make_dir_absolute(path)
 func _physics_process(_delta):
-	$"CanvasLayer/ruppee counter".text = "Ruppees: "+str(playerData.ruppees)
+	$"CanvasLayer/ruppee counter".text = str(playerData.ruppees)
 	if global.entering_building == true:
 		save()
 		global.entering_building = false
