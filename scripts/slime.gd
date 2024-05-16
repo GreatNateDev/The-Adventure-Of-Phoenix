@@ -17,6 +17,7 @@ func _physics_process(delta):
 func _on_player_intersector_body_entered(body):
 	if body.name == "Phoenix":
 		player.playerData.hp -= damage
+		$player_hurt.play()
 		knockback("player")
 func _on_player_intersector_area_entered(area:Area2D):
 	if area.name == "sword":

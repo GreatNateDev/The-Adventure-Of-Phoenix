@@ -66,6 +66,7 @@ func last_mov_pos():
 		last_mov = velocity
 func sword():
 	if playerData.has_sword == true:
+		$sword_swing.play()
 		pass
 	elif playerData.has_sword == false:
 		return

@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://blhupii7e8ong"]
+[gd_scene load_steps=9 format=3 uid="uid://blhupii7e8ong"]
 
 [ext_resource type="Script" path="res://scripts/slime.gd" id="1_6elmv"]
 [ext_resource type="Texture2D" uid="uid://cw75bmq76prwm" path="res://assets/entitys/slime.png" id="1_ajkym"]
+[ext_resource type="AudioStream" uid="uid://ckh17ed8whuvc" path="res://assets/sfx/got_hit.wav" id="3_pmiry"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t0k4c"]
 size = Vector2(10, 10)
@@ -80,6 +81,9 @@ texture_filter = 1
 texture = ExtResource("1_ajkym")
 hframes = 3
 frame = 1
+
+[node name="player_hurt" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_pmiry")
 
 [connection signal="area_entered" from="player_intersector" to="." method="_on_player_intersector_area_entered"]
 [connection signal="body_entered" from="player_intersector" to="." method="_on_player_intersector_body_entered"]

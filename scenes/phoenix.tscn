@@ -1,8 +1,9 @@
-[gd_scene load_steps=20 format=3 uid="uid://c70xvk3duuom0"]
+[gd_scene load_steps=21 format=3 uid="uid://c70xvk3duuom0"]
 
 [ext_resource type="Texture2D" uid="uid://c5op31nmtwde6" path="res://assets/entitys/phoenix_mov.png" id="1_3kg3w"]
 [ext_resource type="Script" path="res://scripts/phoenix.gd" id="1_ohapw"]
 [ext_resource type="Texture2D" uid="uid://mj4ox6xavpkq" path="res://assets/entitys/sword_phoenix.png" id="3_peeuq"]
+[ext_resource type="AudioStream" uid="uid://dfdo45swjxy1j" path="res://assets/sfx/sword_swing.mp3" id="4_3glpl"]
 
 [sub_resource type="Animation" id="Animation_j8tae"]
 resource_name = "idle_down"
@@ -279,5 +280,9 @@ disabled = true
 [node name="sword_cooldown" type="Timer" parent="."]
 wait_time = 0.3
 one_shot = true
+
+[node name="sword_swing" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_3glpl")
+max_distance = 1e+07
 
 [connection signal="timeout" from="sword_cooldown" to="." method="_on_sword_cooldown_timeout"]
