@@ -1,9 +1,7 @@
 res://scenes/hyrule.tscn
 res://scenes/sign.tscn
 res://scenes/death_screen.tscn
-res://scripts/phoenix.gd
 res://scenes/phoenix.tscn
-res://scripts/chest.gd
-res://scripts/global.gd
+res://scripts/phoenix.gd
 res://scripts/death_screen.gd
 res://scripts/boko.gd

@@ -27,6 +27,7 @@ func _ready():
 func  verify_save_directory(path):
 	DirAccess.make_dir_absolute(path)
 func _physics_process(_delta):
+	print(playerData.ruppees)
 	if global.entering_building == true:
 		save()
 		global.entering_building = false
@@ -69,7 +70,9 @@ func _physics_process(_delta):
 	if global.need_to_lose_100_ruppees == true:
 		if playerData.ruppees >= 100:
 			playerData.ruppees -=100
-		else:
+			global.need_to_lose_100_ruppees = false
+			pass
+		elif playerData.ruppees <= 100:
 			die()
 func last_mov_pos():
 	if velocity != Vector2(0,0):
@@ -111,17 +114,15 @@ func _on_sword_cooldown_timeout():
 	cool = false
 func _process(_delta):
 	if Input.is_action_just_pressed("dbg"):
-		die()
+		playerData.hp = 0
 	if Input.is_action_just_pressed("dbg2"):
 		load_sav()
 func die():
 	if global.need_heal == false and global.dead == false:
 		global.dead = true
-		print("rn")
 		global.respawn_pos = self.position
 		global.entering_building = true
 		$death_await.start()
-		print($death_await.time_left)
 
 
 func _on_death_await_timeout():
