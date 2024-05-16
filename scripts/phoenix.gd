@@ -9,10 +9,8 @@ var playerData = SaveData.new()
 @export var enable_cam = true
 @onready var bar = get_node("CanvasLayer/hpbar")
 func load_sav():
-	print("load")
 	playerData = ResourceLoader.load(save_file_path+save_file_name).duplicate(true)
 func save():
-	print("save")
 	ResourceSaver.save(playerData,save_file_path+save_file_name)
 func _ready():
 	global.player = self
@@ -25,7 +23,6 @@ func _ready():
 func  verify_save_directory(path):
 	DirAccess.make_dir_absolute(path)
 func _physics_process(_delta):
-	print(playerData.ruppees)
 	if global.entering_building == true:
 		save()
 		global.entering_building = false

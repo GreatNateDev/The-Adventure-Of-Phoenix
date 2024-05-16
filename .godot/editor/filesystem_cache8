@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1715824239
+::res://::1715824265
 LICENSE.md::TextFile::-1::1715824239::0::1::::<><>::
 ::res://addons/::1715824239
 ::res://addons/ridiculous_coding/::1715824240
@@ -8,7 +8,7 @@ gravity_bold_8.ttf::FontFile::5772028877630708402::1715824239::1715824240::1::::
 plugin.cfg::TextFile::-1::1715824239::0::1::::<><>::
 plugin.gd::GDScript::-1::1715824239::0::1::::<>EditorPlugin<>::
 stats.gd::GDScript::-1::1715824240::0::1::::StatsDataRC<>Resource<>::
-::res://addons/ridiculous_coding/images/::1715824239
+::res://addons/ridiculous_coding/images/::1715824240
 blip.png::CompressedTexture2D::9023907321475517740::1715824239::1715824240::1::::<><>::
 boom.png::CompressedTexture2D::7999229798388025044::1715824239::1715824240::1::::<><>::
 newline.png::CompressedTexture2D::4255520078947183939::1715824239::1715824240::1::::<><>::
@@ -46,10 +46,11 @@ phoenix_idle.png::CompressedTexture2D::5414907399797947373::1715012447::17157959
 phoenix_mov.png::CompressedTexture2D::6908370108465889491::1715012447::1715795971::1::::<><>::
 slime.png::CompressedTexture2D::6384879967622768548::1715012447::1715795971::1::::<><>::
 sword_phoenix.png::CompressedTexture2D::862632574319670632::1715012447::1715795971::1::::<><>::
-::res://assets/items/::1715795938
+::res://assets/items/::1715825785
 bomb.png::CompressedTexture2D::2397911945751661351::1715099954::1715795938::1::::<><>::
 cat.png::CompressedTexture2D::7709230884998934736::1715033472::1715795938::1::::<><>::
 doggy.png::CompressedTexture2D::1803232076026687944::1715099874::1715795938::1::::<><>::
+orange_squirrel.png::CompressedTexture2D::6157250240132367680::1715825785::1715825787::1::::<><>::
 sword_item.png::CompressedTexture2D::8790068037265992734::1715032714::1715795938::1::::<><>::
 yellow_squirrel.png::CompressedTexture2D::488088130950738546::1715105137::1715795938::1::::<><>::
 ::res://assets/misc/::1715796110
@@ -78,16 +79,16 @@ mountain.png::CompressedTexture2D::5721114949339741605::1715012447::1715795854::
 tileset_grounds.png::CompressedTexture2D::37935967781980425::1715731320::1715795861::1::::<><>::
 ::res://misc/::1715796047
 export_presets.cfg::TextFile::-1::1715455988::0::1::::<><>::
-::res://scenes/::1715823962
+::res://scenes/::1715825651
 blue_ruppee.tscn::PackedScene::3044691954593017705::1715796590::0::1::::<><>::uid://ddvtllhjp8u8w::::res://assets/ruppees/blue_ruppee.png<>res://scripts/blue_ruppee.gd
 boko.tscn::PackedScene::3914929686105488005::1715796000::0::1::::<><>::res://scripts/boko.gd<>uid://jpi082ieeukm::::res://assets/entitys/boko.png
 bomb_cave.tscn::PackedScene::458033116140394967::1715795938::0::1::::<><>::uid://cnrl6sats0gf2::::res://assets/world_tilesets/mountain.png<>uid://0v5c3ayge1q0::::res://assets/world_tilesets/colliding map objs.png<>uid://sm2gvge8wv6::::res://assets/world_tilesets/tileset_grounds.png<>uid://p5a8yf1n1c76::::res://assets/world_misc_objects/tree.png<>uid://c70xvk3duuom0::::res://scenes/phoenix.tscn<>uid://bcr22jjjwabxf::::res://scenes/door.tscn<>uid://0xq768fkiyqi::::res://assets/items/doggy.png<>uid://bafti240gtxox::::res://assets/items/bomb.png<>res://scripts/bomb_item.gd
-chest.tscn::PackedScene::2291454336466542599::1715823961::0::1::::<><>::uid://b3hlalul1maoa::::res://assets/world_tilesets/chest_sheet.png<>res://scripts/chest.gd<>uid://dm7k0s7vn7mwq::::res://assets/sfx/chest_sfx.mp3
+chest.tscn::PackedScene::2291454336466542599::1715825651::0::1::::<><>::uid://b3hlalul1maoa::::res://assets/world_tilesets/chest_sheet.png<>res://scripts/chest.gd<>uid://dm7k0s7vn7mwq::::res://assets/sfx/chest_sfx.mp3
 door.tscn::PackedScene::2563580855080019927::1715795886::0::1::::<><>::res://scripts/door.gd<>uid://dbt3upuio4pck::::res://assets/world_misc_objects/door.png
 global.tscn::PackedScene::3181440579609457675::1715793941::0::1::::<><>::res://scripts/global.gd
 gold_ruppee.tscn::PackedScene::1773300757424879293::1715796740::0::1::::<><>::uid://dio60b5aqmy8c::::res://assets/ruppees/gold_ruppee.png<>res://scripts/gold_ruppee.gd
 green_ruppee.tscn::PackedScene::969543531926634797::1715823961::0::1::::<><>::uid://codidklktm5r5::::res://assets/ruppees/green_ruppee.png<>res://scripts/green_ruppee.gd
-hyrule.tscn::PackedScene::7147405007478499801::1715823961::0::1::::<><>::uid://c70xvk3duuom0::::res://scenes/phoenix.tscn<>uid://cgd3jad8ugkis::::res://assets/world_misc_objects/trash.png<>uid://cnrl6sats0gf2::::res://assets/world_tilesets/mountain.png<>uid://sm2gvge8wv6::::res://assets/world_tilesets/tileset_grounds.png<>uid://0v5c3ayge1q0::::res://assets/world_tilesets/colliding map objs.png<>uid://dwy55n3wdtpp7::::res://assets/world_misc_objects/grass.png<>uid://p5a8yf1n1c76::::res://assets/world_misc_objects/tree.png<>uid://bcr22jjjwabxf::::res://scenes/door.tscn<>uid://blhupii7e8ong::::res://scenes/slime.tscn<>uid://tccbl1glwg1l::::res://assets/world_misc_objects/water_splash.png<>uid://dgbv03a6oty2v::::res://assets/world_misc_objects/flowers_brown.png<>uid://n2wif2quir2t::::res://scenes/green_ruppee.tscn<>uid://bcevpbbmndcq3::::res://assets/world_misc_objects/sand.png<>uid://bv1ok44ncogs0::::res://scenes/boko.tscn<>uid://0jaafcvuhw3v::::res://scenes/gold_ruppee.tscn<>uid://g7o0fxcgdq3c::::res://assets/items/yellow_squirrel.png<>uid://bjm4vqgwdq2lx::::res://scenes/blue_ruppee.tscn<>uid://d01r5d0kpkv78::::res://scenes/purple_ruppee.tscn<>uid://7v86hmodry6r::::res://scenes/chest.tscn<>uid://dfyt4megpk0k8::::res://scenes/red_ruppee.tscn
+hyrule.tscn::PackedScene::7147405007478499801::1715825632::0::1::::<><>::uid://c70xvk3duuom0::::res://scenes/phoenix.tscn<>uid://cgd3jad8ugkis::::res://assets/world_misc_objects/trash.png<>uid://cnrl6sats0gf2::::res://assets/world_tilesets/mountain.png<>uid://sm2gvge8wv6::::res://assets/world_tilesets/tileset_grounds.png<>uid://0v5c3ayge1q0::::res://assets/world_tilesets/colliding map objs.png<>uid://dwy55n3wdtpp7::::res://assets/world_misc_objects/grass.png<>uid://p5a8yf1n1c76::::res://assets/world_misc_objects/tree.png<>uid://bcr22jjjwabxf::::res://scenes/door.tscn<>uid://blhupii7e8ong::::res://scenes/slime.tscn<>uid://tccbl1glwg1l::::res://assets/world_misc_objects/water_splash.png<>uid://dgbv03a6oty2v::::res://assets/world_misc_objects/flowers_brown.png<>uid://n2wif2quir2t::::res://scenes/green_ruppee.tscn<>uid://bcevpbbmndcq3::::res://assets/world_misc_objects/sand.png<>uid://bv1ok44ncogs0::::res://scenes/boko.tscn<>uid://0jaafcvuhw3v::::res://scenes/gold_ruppee.tscn<>uid://g7o0fxcgdq3c::::res://assets/items/yellow_squirrel.png<>uid://bjm4vqgwdq2lx::::res://scenes/blue_ruppee.tscn<>uid://d01r5d0kpkv78::::res://scenes/purple_ruppee.tscn<>uid://7v86hmodry6r::::res://scenes/chest.tscn<>uid://dfyt4megpk0k8::::res://scenes/red_ruppee.tscn
 phoenix.tscn::PackedScene::7071928368812225065::1715796000::0::1::::<><>::uid://c5op31nmtwde6::::res://assets/entitys/phoenix_mov.png<>res://scripts/phoenix.gd<>uid://mj4ox6xavpkq::::res://assets/entitys/sword_phoenix.png
 purple_ruppee.tscn::PackedScene::8968742922994822261::1715823962::0::1::::<><>::uid://dn05gaq0uhurw::::res://assets/ruppees/purple_ruppee.png<>res://scripts/purple_ruppee.gd
 red_ruppee.tscn::PackedScene::7560957383005203801::1715796621::0::1::::<><>::uid://ct1nsbhjchehu::::res://assets/ruppees/red_ruppee.png<>res://scripts/red_ruppee.gd
@@ -95,15 +96,15 @@ slime.tscn::PackedScene::3174190168759607488::1715796000::0::1::::<><>::res://sc
 start.tscn::PackedScene::301071119358914406::1715032462::0::1::::<><>::res://scripts/start.gd
 sword_cave.tscn::PackedScene::8910164260359474565::1715795938::0::1::::<><>::uid://cnrl6sats0gf2::::res://assets/world_tilesets/mountain.png<>uid://0v5c3ayge1q0::::res://assets/world_tilesets/colliding map objs.png<>uid://sm2gvge8wv6::::res://assets/world_tilesets/tileset_grounds.png<>uid://p5a8yf1n1c76::::res://assets/world_misc_objects/tree.png<>uid://c70xvk3duuom0::::res://scenes/phoenix.tscn<>uid://dxh8evuja65eg::::res://assets/items/sword_item.png<>res://scenes/sword_item.gd<>uid://dh3n52y6b1dpg::::res://assets/items/cat.png<>uid://bcr22jjjwabxf::::res://scenes/door.tscn
 sword_item.gd::GDScript::-1::1715039460::0::1::::<>Sprite2D<>::res://global.gd
-::res://scripts/::1715796738
+::res://scripts/::1715825607
 blue_ruppee.gd::GDScript::-1::1715796580::0::1::::<>Sprite2D<>::
 boko.gd::GDScript::-1::1715794026::0::1::::<>CharacterBody2D<>::
 bomb_item.gd::GDScript::-1::1715100229::0::1::::<>Sprite2D<>::res://global.gd
-chest.gd::GDScript::-1::1715795214::0::1::::<>Sprite2D<>::res://scenes/green_ruppee.tscn
+chest.gd::GDScript::-1::1715825607::0::1::::<>Sprite2D<>::res://scenes/green_ruppee.tscn<>res://scenes/blue_ruppee.tscn<>res://scenes/red_ruppee.tscn<>res://scenes/purple_ruppee.tscn<>res://scenes/gold_ruppee.tscn
 door.gd::GDScript::-1::1715099505::0::1::::<>Area2D<>::res://global.gd
 global.gd::GDScript::-1::1715039112::0::1::::<>Node<>::
 green_ruppee.gd::GDScript::-1::1715796539::0::1::::<>Sprite2D<>::
-phoenix.gd::GDScript::-1::1715794924::0::1::::<>CharacterBody2D<>::res://scripts/save.gd<>res://scripts/global.gd
+phoenix.gd::GDScript::-1::1715824522::0::1::::<>CharacterBody2D<>::res://scripts/save.gd<>res://scripts/global.gd
 purple_ruppee.gd::GDScript::-1::1715796653::0::1::::<>Sprite2D<>::
 red_ruppee.gd::GDScript::-1::1715796621::0::1::::<>Sprite2D<>::
 gold_ruppee.gd::GDScript::-1::1715796738::0::1::::<>Sprite2D<>::
