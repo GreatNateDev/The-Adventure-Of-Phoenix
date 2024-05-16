@@ -1,8 +1,12 @@
-res://scenes/sign.tscn
-res://scenes/sign.gd
 res://scenes/hyrule.tscn
-res://scripts/save.gd
 res://scenes/bomb_cave.tscn
 res://scenes/phoenix.tscn
 res://scenes/slime.tscn
-res://scripts/boko.gd
+res://scenes/sign.tscn
+res://sprite_2d.gd
+res://scripts/global.gd
+res://scripts/phoenix.gd
+res://sprite_2d.tscn
+res://death_screen.tscn
+res://scenes/death_screen.tscn
+res://scripts/death_screen.gd

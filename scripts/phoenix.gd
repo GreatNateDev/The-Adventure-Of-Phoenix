@@ -14,6 +14,9 @@ func load_sav():
 func save():
 	ResourceSaver.save(playerData,save_file_path+save_file_name)
 func _ready():
+	if global.need_heal == true:
+		playerData.hp = 100
+		global.need_heal = false
 	global.player = self
 	verify_save_directory(save_file_path)
 	if global.just_entered_building == true:
@@ -59,8 +62,15 @@ func _physics_process(_delta):
 		velocity = mov.normalized()*playerData.speed
 	if Input.is_action_just_pressed("sword") and cool == false:
 		sword()
+	if playerData.hp <=0:
+		die()
 	last_mov_pos()
 	move_and_slide()
+	if global.need_to_lose_100_ruppees == true:
+		if playerData.ruppees >= 100:
+			playerData.ruppees -=100
+		else:
+			die()
 func last_mov_pos():
 	if velocity != Vector2(0,0):
 		last_mov = velocity
@@ -104,3 +114,9 @@ func _process(_delta):
 		save()
 	if Input.is_action_just_pressed("dbg2"):
 		load_sav()
+func die():
+	if global.need_heal == false:
+		global.respawn_pos = self.position
+		global.entering_building = true
+		await get_tree().create_timer(1).timeout
+		get_tree().change_scene_to_file("res://scenes/death_screen.tscn")
