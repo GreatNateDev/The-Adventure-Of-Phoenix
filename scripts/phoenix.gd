@@ -6,6 +6,7 @@ var mov
 var save_file_path = "user://save/"
 var save_file_name = "Player.tres"
 var playerData = SaveData.new()
+var cancel_mov = false
 @export var enable_cam = true
 @onready var bar = get_node("CanvasLayer/hpbar")
 func load_sav():
@@ -54,7 +55,8 @@ func _physics_process(_delta):
 		$AnimationPlayer.play("idle_up")
 	elif velocity == Vector2(0,0) and last_mov == Vector2(0,playerData.speed):
 		$AnimationPlayer.play("idle_down")
-	velocity = mov.normalized()*playerData.speed
+	if cancel_mov == false:
+		velocity = mov.normalized()*playerData.speed
 	if Input.is_action_just_pressed("sword") and cool == false:
 		sword()
 	last_mov_pos()

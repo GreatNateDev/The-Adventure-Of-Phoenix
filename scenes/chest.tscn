@@ -81,4 +81,9 @@ stream = ExtResource("2_hyyuv")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("CircleShape2D_j0042")
 
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.064
+one_shot = true
+
 [connection signal="body_entered" from="Area2D" to="." method="on_player_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

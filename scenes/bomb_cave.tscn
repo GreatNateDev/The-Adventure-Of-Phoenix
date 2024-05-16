@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://gr40dyeveobn"]
+[gd_scene load_steps=18 format=3 uid="uid://gr40dyeveobn"]
 
 [ext_resource type="Texture2D" uid="uid://cnrl6sats0gf2" path="res://assets/world_tilesets/mountain.png" id="1_g217g"]
 [ext_resource type="Texture2D" uid="uid://0v5c3ayge1q0" path="res://assets/world_tilesets/colliding map objs.png" id="2_277qs"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://0xq768fkiyqi" path="res://assets/items/doggy.png" id="7_77ii8"]
 [ext_resource type="Texture2D" uid="uid://bafti240gtxox" path="res://assets/items/bomb.png" id="8_7jgj1"]
 [ext_resource type="Script" path="res://scripts/bomb_item.gd" id="9_le8fg"]
+[ext_resource type="PackedScene" uid="uid://7v86hmodry6r" path="res://scenes/chest.tscn" id="10_xixmq"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0qsq0"]
 texture = ExtResource("1_g217g")
@@ -115,5 +116,9 @@ script = ExtResource("9_le8fg")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="bomb/Area2D"]
 shape = SubResource("CircleShape2D_lsfra")
+
+[node name="chest" parent="." instance=ExtResource("10_xixmq")]
+position = Vector2(758, 261)
+item = "blue_ruppee"
 
 [connection signal="body_entered" from="bomb/Area2D" to="bomb" method="_on_area_2d_body_entered"]

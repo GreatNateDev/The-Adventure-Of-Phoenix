@@ -27,7 +27,14 @@ func _process(_delta):
 func run(itom : PackedScene):
 	spawned = true
 	$AnimationPlayer.play("open")
+	$open_sfx.play()
+	player.cancel_mov = true
+	$Timer.start()
 	var reward = itom.instantiate()
 	get_parent().add_child(reward)
 	reward.position = self.position
 	reward.position.y -= 5
+
+
+func _on_timer_timeout():
+	player.cancel_mov = false
