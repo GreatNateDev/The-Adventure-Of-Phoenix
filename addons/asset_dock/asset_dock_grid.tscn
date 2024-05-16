@@ -1,0 +1,89 @@
+[gd_scene load_steps=3 format=3 uid="uid://bynipdkw3xf80"]
+
+[ext_resource type="Script" path="res://addons/asset_dock/asset_dock_grid.gd" id="1_jtjrv"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hec01"]
+bg_color = Color(0.215686, 0.215686, 0.215686, 1)
+
+[node name="AssetDockGrid" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_jtjrv")
+
+[node name="HSplitContainer" type="HSplitContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="FileListPanel" type="Panel" parent="HSplitContainer"]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HSplitContainer/FileListPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TreeViewLineEdit" type="LineEdit" parent="HSplitContainer/FileListPanel/VBoxContainer"]
+layout_mode = 2
+placeholder_text = "Search For Folder"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="HSplitContainer/FileListPanel/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Tree" type="Tree" parent="HSplitContainer/FileListPanel/VBoxContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+allow_search = false
+
+[node name="MainPanel" type="Panel" parent="HSplitContainer"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_hec01")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HSplitContainer/MainPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SearchContainer" type="HBoxContainer" parent="HSplitContainer/MainPanel/VBoxContainer"]
+layout_mode = 2
+
+[node name="LineEdit" type="LineEdit" parent="HSplitContainer/MainPanel/VBoxContainer/SearchContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "Search For Asset"
+
+[node name="AssetContainer" type="HBoxContainer" parent="HSplitContainer/MainPanel/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ScrollContainer" type="ScrollContainer" parent="HSplitContainer/MainPanel/VBoxContainer/AssetContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="GridContainer" type="GridContainer" parent="HSplitContainer/MainPanel/VBoxContainer/AssetContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+columns = 12
+
+[connection signal="text_changed" from="HSplitContainer/FileListPanel/VBoxContainer/TreeViewLineEdit" to="." method="_on_tree_view_line_edit_text_changed"]
+[connection signal="cell_selected" from="HSplitContainer/FileListPanel/VBoxContainer/ScrollContainer/Tree" to="." method="_on_tree_cell_selected"]
+[connection signal="tree_exiting" from="HSplitContainer/FileListPanel/VBoxContainer/ScrollContainer/Tree" to="." method="_on_tree_tree_exiting"]
+[connection signal="gui_input" from="HSplitContainer/MainPanel" to="." method="_on_main_panel_gui_input"]
+[connection signal="text_changed" from="HSplitContainer/MainPanel/VBoxContainer/SearchContainer/LineEdit" to="." method="_on_line_edit_text_changed"]

@@ -25,13 +25,18 @@ func _on_player_intersector_area_entered(area:Area2D):
 		damagee()
 		mov = false
 		if hits <= 0:
-			var heart = randi_range(0,1)
-			if heart == 1:
+			var spawn = randi_range(0,2)
+			if spawn == 1:
 				var spawn_heart = preload("res://scenes/heart.tscn")
 				var h = spawn_heart.instantiate()
 				get_parent().add_child(h)
 				h.position = self.position
-			else:
+			elif spawn == 2:
+				var spawn_ruppee = preload("res://scenes/green_ruppee.tscn")
+				var r = spawn_ruppee.instantiate()
+				get_parent().add_child(r)
+				r.position = self.position
+			elif spawn == 0:
 				pass
 			self.queue_free()
 func knockback(who):

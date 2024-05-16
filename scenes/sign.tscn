@@ -1,12 +1,16 @@
-[gd_scene load_steps=4 format=3 uid="uid://d3cs5jjp7csu4"]
+[gd_scene load_steps=5 format=3 uid="uid://d3cs5jjp7csu4"]
 
 [ext_resource type="Texture2D" uid="uid://ui8pdqg7vr65" path="res://assets/world_misc_objects/sign.png" id="1_80b82"]
-[ext_resource type="Script" path="res://scenes/sign.gd" id="2_hkqsg"]
+[ext_resource type="Script" path="res://scripts/sign.gd" id="2_hkqsg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6puvw"]
-size = Vector2(20, 25)
+size = Vector2(20, 29)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ya7w4"]
+size = Vector2(20, 26)
 
 [node name="sign" type="Sprite2D"]
+z_index = -1
 texture_filter = 1
 texture = ExtResource("1_80b82")
 script = ExtResource("2_hkqsg")
@@ -14,8 +18,31 @@ script = ExtResource("2_hkqsg")
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(0, 12.5)
+position = Vector2(0, 14.5)
 shape = SubResource("RectangleShape2D_6puvw")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0, 9)
+shape = SubResource("RectangleShape2D_ya7w4")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 11.764
+one_shot = true
+
+[node name="Label" type="Label" parent="."]
+z_index = 5
+offset_left = -24.0
+offset_top = -38.0
+offset_right = 99.0
+offset_bottom = -15.0
+scale = Vector2(0.4, 0.4)
+theme_override_font_sizes/font_size = 8
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

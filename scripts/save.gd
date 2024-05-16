@@ -7,3 +7,4 @@ class_name SaveData
 @export var has_sword = true
 @export var ruppees = 0
 @export var has_bombs = false
+@export var first_start = true

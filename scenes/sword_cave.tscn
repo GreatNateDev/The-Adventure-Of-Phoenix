@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://p5a8yf1n1c76" path="res://assets/world_misc_objects/tree.png" id="4_f1ahq"]
 [ext_resource type="PackedScene" uid="uid://c70xvk3duuom0" path="res://scenes/phoenix.tscn" id="5_mkwms"]
 [ext_resource type="Texture2D" uid="uid://dxh8evuja65eg" path="res://assets/items/sword_item.png" id="6_7cs04"]
-[ext_resource type="Script" path="res://scenes/sword_item.gd" id="7_72x4y"]
+[ext_resource type="Script" path="res://scripts/sword_item.gd" id="7_72x4y"]
 [ext_resource type="Texture2D" uid="uid://dh3n52y6b1dpg" path="res://assets/items/cat.png" id="8_fen3m"]
 [ext_resource type="PackedScene" uid="uid://bcr22jjjwabxf" path="res://scenes/door.tscn" id="9_vgtwt"]
 
