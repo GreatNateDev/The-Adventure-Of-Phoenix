@@ -1,8 +1,8 @@
+res://scenes/sign.tscn
+res://scenes/sign.gd
 res://scenes/hyrule.tscn
+res://scripts/save.gd
 res://scenes/bomb_cave.tscn
 res://scenes/phoenix.tscn
-res://scripts/phoenix.gd
 res://scenes/slime.tscn
-res://scripts/slime.gd
-res://scenes/sign.gd
-res://scenes/sign.tscn
+res://scripts/boko.gd

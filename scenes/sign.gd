@@ -7,7 +7,7 @@ func _on_area_2d_body_entered(body):
 func _process(delta):
 	if player != null:
 		if Input.is_action_just_pressed("sword"):
-			
+			pass
 
 
 func _on_area_2d_body_exited(body):

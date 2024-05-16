@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1715865723
+::res://::1715866434
 LICENSE.md::TextFile::-1::1715824239::0::1::::<><>::
 ::res://addons/::1715824239
 ::res://addons/ridiculous_coding/::1715824240
@@ -67,7 +67,7 @@ chest_sfx.mp3::AudioStreamMP3::8068241073467724188::1715826617::1715826621::1:::
 got_hit.wav::AudioStreamWAV::5490816451518710292::1715865712::1715865723::1::::<><>::
 hyrule.mp3::AudioStreamMP3::6978229940266661781::1715826988::1715827060::1::::<><>::
 sword_swing.mp3::AudioStreamMP3::7517302832973139685::1715865414::1715865429::1::::<><>::
-::res://assets/world_misc_objects/::1715866169
+::res://assets/world_misc_objects/::1715866174
 door.png::CompressedTexture2D::7270410682849720018::1715012447::1715795886::1::::<><>::
 flowers_brown.png::CompressedTexture2D::7583780664439061731::1715103674::1715795906::1::::<><>::
 grass.png::CompressedTexture2D::8754837487876019554::1715102916::1715795906::1::::<><>::
@@ -83,7 +83,7 @@ mountain.png::CompressedTexture2D::5721114949339741605::1715012447::1715795854::
 tileset_grounds.png::CompressedTexture2D::37935967781980425::1715731320::1715795861::1::::<><>::
 ::res://misc/::1715796047
 export_presets.cfg::TextFile::-1::1715455988::0::1::::<><>::
-::res://scenes/::1715865927
+::res://scenes/::1715866333
 blue_ruppee.tscn::PackedScene::3044691954593017705::1715796590::0::1::::<><>::uid://ddvtllhjp8u8w::::res://assets/ruppees/blue_ruppee.png<>res://scripts/blue_ruppee.gd
 boko.tscn::PackedScene::3914929686105488005::1715796000::0::1::::<><>::res://scripts/boko.gd<>uid://jpi082ieeukm::::res://assets/entitys/boko.png
 bomb_cave.tscn::PackedScene::458033116140394967::1715865815::0::1::::<><>::uid://cnrl6sats0gf2::::res://assets/world_tilesets/mountain.png<>uid://0v5c3ayge1q0::::res://assets/world_tilesets/colliding map objs.png<>uid://sm2gvge8wv6::::res://assets/world_tilesets/tileset_grounds.png<>uid://p5a8yf1n1c76::::res://assets/world_misc_objects/tree.png<>uid://c70xvk3duuom0::::res://scenes/phoenix.tscn<>uid://bcr22jjjwabxf::::res://scenes/door.tscn<>uid://0xq768fkiyqi::::res://assets/items/doggy.png<>uid://bafti240gtxox::::res://assets/items/bomb.png<>res://scripts/bomb_item.gd<>uid://7v86hmodry6r::::res://scenes/chest.tscn
@@ -96,7 +96,8 @@ hyrule.tscn::PackedScene::7147405007478499801::1715865913::0::1::::<><>::uid://c
 phoenix.tscn::PackedScene::7071928368812225065::1715865816::0::1::::<><>::uid://c5op31nmtwde6::::res://assets/entitys/phoenix_mov.png<>res://scripts/phoenix.gd<>uid://mj4ox6xavpkq::::res://assets/entitys/sword_phoenix.png<>uid://dfdo45swjxy1j::::res://assets/sfx/sword_swing.mp3
 purple_ruppee.tscn::PackedScene::8968742922994822261::1715823962::0::1::::<><>::uid://dn05gaq0uhurw::::res://assets/ruppees/purple_ruppee.png<>res://scripts/purple_ruppee.gd
 red_ruppee.tscn::PackedScene::7560957383005203801::1715796621::0::1::::<><>::uid://ct1nsbhjchehu::::res://assets/ruppees/red_ruppee.png<>res://scripts/red_ruppee.gd
-sign.tscn::PackedScene::9129825395477057981::1715865927::0::1::::<><>::
+sign.gd::GDScript::-1::1715866333::0::1::::<>Sprite2D<>::
+sign.tscn::PackedScene::9129825395477057981::1715866333::0::1::::<><>::uid://ui8pdqg7vr65::::res://assets/world_misc_objects/sign.png<>res://scenes/sign.gd
 slime.tscn::PackedScene::3174190168759607488::1715865816::0::1::::<><>::res://scripts/slime.gd<>uid://cw75bmq76prwm::::res://assets/entitys/slime.png<>uid://ckh17ed8whuvc::::res://assets/sfx/got_hit.wav
 start.tscn::PackedScene::301071119358914406::1715032462::0::1::::<><>::res://scripts/start.gd
 sword_cave.tscn::PackedScene::8910164260359474565::1715795938::0::1::::<><>::uid://cnrl6sats0gf2::::res://assets/world_tilesets/mountain.png<>uid://0v5c3ayge1q0::::res://assets/world_tilesets/colliding map objs.png<>uid://sm2gvge8wv6::::res://assets/world_tilesets/tileset_grounds.png<>uid://p5a8yf1n1c76::::res://assets/world_misc_objects/tree.png<>uid://c70xvk3duuom0::::res://scenes/phoenix.tscn<>uid://dxh8evuja65eg::::res://assets/items/sword_item.png<>res://scenes/sword_item.gd<>uid://dh3n52y6b1dpg::::res://assets/items/cat.png<>uid://bcr22jjjwabxf::::res://scenes/door.tscn
