@@ -61,11 +61,11 @@ _data = {
 radius = 23.0
 
 [node name="chest" type="Sprite2D"]
+z_index = -1
 texture_filter = 1
 texture = ExtResource("1_w2822")
 hframes = 2
 script = ExtResource("2_d2vfb")
-item = "green_ruppee"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {

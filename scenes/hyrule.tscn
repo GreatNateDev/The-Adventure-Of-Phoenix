@@ -142,3 +142,4 @@ text = "Cant get me :)"
 
 [node name="chest" parent="." instance=ExtResource("16_npxvp")]
 position = Vector2(3268, 4547)
+item = "gold_ruppee"
