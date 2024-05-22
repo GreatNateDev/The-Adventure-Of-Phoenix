@@ -8,3 +8,4 @@ class_name SaveData
 @export var ruppees = 0
 @export var has_bombs = false
 @export var first_start = true
+@export var max_hp = 100

@@ -67,6 +67,8 @@ func _physics_process(_delta):
 		sword()
 	if playerData.hp <=0:
 		die()
+	if playerData.hp > playerData.max_hp:
+		playerData.hp = playerData.max_hp
 	last_mov_pos()
 	move_and_slide()
 	if global.need_to_lose_100_ruppees == true:

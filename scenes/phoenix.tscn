@@ -266,6 +266,7 @@ theme_override_styles/fill = SubResource("StyleBoxFlat_pjwux")
 show_percentage = false
 
 [node name="Control" type="Control" parent="CanvasLayer"]
+z_index = 1
 layout_mode = 3
 anchors_preset = 1
 anchor_left = 1.0
@@ -277,29 +278,28 @@ offset_bottom = 48.0
 grow_horizontal = 0
 
 [node name="ruppee counter" type="Label" parent="CanvasLayer/Control"]
-z_index = 2
+z_index = 1
 layout_mode = 1
-anchors_preset = 6
+anchors_preset = -1
 anchor_left = 1.0
-anchor_top = 0.5
-anchor_right = 1.0
-anchor_bottom = 0.5
-offset_left = -1.0
-offset_top = -11.5
-offset_bottom = 11.5
-grow_horizontal = 0
-grow_vertical = 2
+anchor_top = 0.15
+anchor_right = 3.2
+anchor_bottom = 0.15
+offset_right = 10.0
+offset_bottom = 23.0
+text = "0"
 metadata/_edit_use_anchors_ = true
 
-[node name="ruppee_texture" type="Sprite2D" parent="CanvasLayer/Control/ruppee counter"]
-texture_filter = 1
-position = Vector2(107.23, 10.5145)
-scale = Vector2(4, 4)
-texture = ExtResource("4_ojuft")
-
 [node name="green_ruppee" parent="CanvasLayer/Control/ruppee counter" instance=ExtResource("3_p7uxn")]
-position = Vector2(246, 8)
+position = Vector2(249, 11)
 scale = Vector2(5, 5)
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/Control/ruppee counter"]
+z_index = -1
+texture_filter = 1
+position = Vector2(108, 14)
+scale = Vector2(4.22414, 3.83333)
+texture = ExtResource("4_ojuft")
 
 [node name="sword_sprite" type="Sprite2D" parent="."]
 visible = false
