@@ -2,7 +2,7 @@ extends Node2D
 func _ready():
 	if $Phoenix.playerData.first_start == true:
 		$Phoenix.cancel_mov = true
-		$"first start".play("run")
+		$"Misc/first start".play("run")
 		
 
 

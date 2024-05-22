@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://b6tleixr3ccj"]
+
+[ext_resource type="Texture2D" uid="uid://bjyif7vb26y25" path="res://assets/world_misc_objects/swimmable_water.png" id="1_u3dwr"]
+
+[node name="swimmable_water" type="Area2D"]
+
+[node name="Particles" type="CPUParticles2D" parent="."]
+texture = ExtResource("1_u3dwr")
+emission_shape = 1
+emission_sphere_radius = 7.45
+spread = 180.0
+scale_amount_min = 0.0
+scale_amount_max = 0.1

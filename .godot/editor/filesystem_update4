@@ -5,3 +5,6 @@ res://scenes/phoenix.tscn
 res://scenes/death_screen.tscn
 res://addons/asset_dock/asset_dock.gd
 res://scenes/door.tscn
+res://scripts/hyrule.gd
+res://scripts/door.gd
+res://scenes/swimmable_water.tscn
