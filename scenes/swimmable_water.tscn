@@ -1,13 +1,32 @@
-[gd_scene load_steps=2 format=3 uid="uid://b6tleixr3ccj"]
+[gd_scene load_steps=4 format=3 uid="uid://b6tleixr3ccj"]
 
+[ext_resource type="Script" path="res://scripts/swimmable_water.gd" id="1_m5io8"]
 [ext_resource type="Texture2D" uid="uid://bjyif7vb26y25" path="res://assets/world_misc_objects/swimmable_water.png" id="1_u3dwr"]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_4k8xw"]
+
 [node name="swimmable_water" type="Area2D"]
+script = ExtResource("1_m5io8")
 
 [node name="Particles" type="CPUParticles2D" parent="."]
+lifetime = 0.4
+speed_scale = 0.5
+explosiveness = 1.0
 texture = ExtResource("1_u3dwr")
 emission_shape = 1
 emission_sphere_radius = 7.45
 spread = 180.0
+initial_velocity_min = 20.2
+initial_velocity_max = 222.22
+linear_accel_max = 4.04
+damping_min = 95.96
+damping_max = 95.96
 scale_amount_min = 0.0
 scale_amount_max = 0.1
+color = Color(0, 0.776022, 0.776022, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_4k8xw")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
