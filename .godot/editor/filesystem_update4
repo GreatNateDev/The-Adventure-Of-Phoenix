@@ -1,4 +1,7 @@
+res://scenes/sword_cave.tscn
+res://scenes/start.tscn
 res://scenes/hyrule.tscn
-res://scripts/save.gd
-res://scripts/hyrule.gd
-res://scripts/sign.gd
+res://scenes/phoenix.tscn
+res://scenes/death_screen.tscn
+res://addons/asset_dock/asset_dock.gd
+res://scenes/door.tscn

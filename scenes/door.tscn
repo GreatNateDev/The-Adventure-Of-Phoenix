@@ -7,6 +7,7 @@
 size = Vector2(14, 4)
 
 [node name="Door" type="Area2D"]
+texture_filter = 1
 script = ExtResource("1_oofuu")
 
 [node name="door_coll" type="CollisionShape2D" parent="."]

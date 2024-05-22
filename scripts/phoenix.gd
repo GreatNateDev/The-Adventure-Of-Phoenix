@@ -27,7 +27,7 @@ func _ready():
 func  verify_save_directory(path):
 	DirAccess.make_dir_absolute(path)
 func _physics_process(_delta):
-	$"CanvasLayer/ruppee counter".text = str(playerData.ruppees)
+	$"CanvasLayer/Control/ruppee counter".text = str(playerData.ruppees)
 	if global.entering_building == true:
 		save()
 		global.entering_building = false
@@ -114,11 +114,6 @@ func sword():
 	move = true
 func _on_sword_cooldown_timeout():
 	cool = false
-func _process(_delta):
-	if Input.is_action_just_pressed("dbg"):
-		playerData.hp = 0
-	if Input.is_action_just_pressed("dbg2"):
-		load_sav()
 func die():
 	if global.need_heal == false and global.dead == false:
 		global.ruppees = playerData.ruppees

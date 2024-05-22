@@ -1,4 +1,4 @@
-extends Sprite2D
+extends Node2D
 
 func _ready():
 	global.need_to_lose_100_ruppees = false
