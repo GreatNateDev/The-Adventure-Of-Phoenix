@@ -1,9 +1,14 @@
-[gd_scene load_steps=2 format=3 uid="uid://b11u7cnw63rxs"]
+[gd_scene load_steps=3 format=3 uid="uid://b11u7cnw63rxs"]
+
+[ext_resource type="Script" path="res://scripts/moss.gd" id="1_jrhxs"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_6vd03"]
 radius = 5.09902
 
 [node name="moss" type="Area2D"]
+script = ExtResource("1_jrhxs")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_6vd03")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]

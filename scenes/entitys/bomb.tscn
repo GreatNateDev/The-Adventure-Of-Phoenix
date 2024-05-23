@@ -11,13 +11,10 @@ texture_filter = 1
 texture = ExtResource("1_y7pei")
 script = ExtResource("1_jrdja")
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="bomb_area" type="Area2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="bomb_area"]
 shape = SubResource("CircleShape2D_l88lk")
 
-[node name="Timer" type="Timer" parent="."]
-wait_time = 2.0
-
-[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
-[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
+[connection signal="body_entered" from="bomb_area" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="bomb_area" to="." method="_on_area_2d_body_exited"]

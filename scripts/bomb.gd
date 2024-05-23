@@ -2,6 +2,7 @@ extends Sprite2D
 var selected = false
 var target = null
 var dftclr = self.modulate
+var boom = false
 func _ready():
 	explode()
 func explode():
@@ -15,8 +16,8 @@ func explode():
 	await get_tree().create_timer(.3).timeout
 	self.self_modulate = dftclr
 	await get_tree().create_timer(.3).timeout
+	boom = true
 	if target != null:
-		print(target)
 		target.hits -= 6
 		self.queue_free()
 	else:

@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=3 uid="uid://c83iyl7qhuffl"]
+[gd_scene load_steps=38 format=3 uid="uid://c83iyl7qhuffl"]
 
 [ext_resource type="Script" path="res://scripts/hyrule.gd" id="1_3v6a7"]
 [ext_resource type="PackedScene" uid="uid://c70xvk3duuom0" path="res://scenes/entitys/phoenix.tscn" id="1_e5orw"]
@@ -23,6 +23,7 @@
 [ext_resource type="AudioStream" uid="uid://c6okosj07cog8" path="res://assets/sfx/hyrule.mp3" id="22_fg3ye"]
 [ext_resource type="PackedScene" uid="uid://d3cs5jjp7csu4" path="res://scenes/areas/sign.tscn" id="23_al2em"]
 [ext_resource type="PackedScene" uid="uid://b6tleixr3ccj" path="res://scenes/areas/swimmable_water.tscn" id="23_i6mus"]
+[ext_resource type="PackedScene" uid="uid://b11u7cnw63rxs" path="res://scenes/areas/moss.tscn" id="24_ugav2"]
 
 [sub_resource type="Animation" id="Animation_a8x8n"]
 resource_name = "run"
@@ -245,4 +246,9 @@ position = Vector2(15324.2, 4606.47)
 dir = "up"
 length = 20
 
+[node name="Moss" type="Node2D" parent="."]
+
+[node name="bomb_island_moss" parent="Moss" instance=ExtResource("24_ugav2")]
+
 [connection signal="animation_finished" from="Misc/first start" to="." method="_on_first_start_animation_finished"]
+[connection signal="bombed" from="Moss/bomb_island_moss" to="." method="bomb_island_rock"]

@@ -13,3 +13,7 @@ res://scripts/chest.gd
 res://scripts/death_screen.gd
 res://scripts/door.gd
 res://scripts/start.gd
+res://scenes/entitys/bomb.tscn
+res://scripts/moss.gd
+res://scripts/hyrule.gd
+res://addons/asset_dock/asset_dock.gd
