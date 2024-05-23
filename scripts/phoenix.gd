@@ -131,7 +131,7 @@ func _on_death_await_timeout():
 	get_tree().change_scene_to_file("res://scenes/death_screen.tscn")
 
 func bomb():
-	var bomb_spn = preload("res://scenes/bomb.tscn")
+	var bomb_spn = preload("res://scenes/entitys/bomb.tscn")
 	var b = bomb_spn.instantiate()
 	get_parent().add_child(b)
 	b.position = self.position

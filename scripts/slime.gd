@@ -55,12 +55,12 @@ func die():
 	if hits <= 0:
 			var spawn = randi_range(0,2)
 			if spawn == 1:
-				var spawn_heart = preload("res://scenes/heart.tscn")
+				var spawn_heart = preload("res://scenes/areas/heart.tscn")
 				var h = spawn_heart.instantiate()
 				get_parent().add_child(h)
 				h.position = self.position
 			elif spawn == 2:
-				var spawn_ruppee = preload("res://scenes/green_ruppee.tscn")
+				var spawn_ruppee = preload("res://scenes/ruppees/green_ruppee.tscn")
 				var r = spawn_ruppee.instantiate()
 				get_parent().add_child(r)
 				r.position = self.position

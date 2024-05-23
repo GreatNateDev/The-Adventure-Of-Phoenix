@@ -17,16 +17,16 @@ func _on_body_entered(body:Node2D):
 
 func _on_trans_time_timeout():
 	if area == "sword_cave":
-		get_tree().change_scene_to_file("res://scenes/sword_cave.tscn")
+		get_tree().change_scene_to_file("res://scenes/maps/sword_cave.tscn")
 		global.just_entered_building = true
 	elif area == "b_sword_cave":
-		get_tree().change_scene_to_file("res://scenes/hyrule.tscn")
+		get_tree().change_scene_to_file("res://scenes/maps/hyrule.tscn")
 		global.just_entered_building = true
 		global.tp_pos = Vector2(15408,5018)
 	elif area == "bomb_cave":
-		get_tree().change_scene_to_file("res://scenes/bomb_cave.tscn")
+		get_tree().change_scene_to_file("res://scenes/maps/bomb_cave.tscn")
 		global.just_entered_building = true
 	elif area == "b_bomb_cave":
-		get_tree().change_scene_to_file("res://scenes/hyrule.tscn")
+		get_tree().change_scene_to_file("res://scenes/maps/hyrule.tscn")
 		global.just_entered_building = true
 		global.tp_pos = Vector2(15420,4485)

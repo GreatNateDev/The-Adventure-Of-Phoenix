@@ -6,15 +6,15 @@ var opened = true
 var spawned = false
 func _physics_process(_delta):
 	if item == "green_ruppee":
-		item_for_func = preload("res://scenes/green_ruppee.tscn")
+		item_for_func = preload("res://scenes/ruppees/green_ruppee.tscn")
 	elif item == "blue_ruppee":
-		item_for_func = preload("res://scenes/blue_ruppee.tscn")
+		item_for_func = preload("res://scenes/ruppees/blue_ruppee.tscn")
 	elif item == "red_ruppee":
-		item_for_func = preload("res://scenes/red_ruppee.tscn")
+		item_for_func = preload("res://scenes/ruppees/red_ruppee.tscn")
 	elif item == "purple_ruppee":
-		item_for_func = preload("res://scenes/purple_ruppee.tscn")
+		item_for_func = preload("res://scenes/ruppees/purple_ruppee.tscn")
 	elif item == "gold_ruppee":
-		item_for_func = preload("res://scenes/gold_ruppee.tscn")
+		item_for_func = preload("res://scenes/ruppees/gold_ruppee.tscn")
 func on_player_entered(body):
 	if body.name == "Phoenix":
 		player = body

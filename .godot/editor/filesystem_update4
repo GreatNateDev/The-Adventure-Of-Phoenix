@@ -6,3 +6,10 @@ res://scenes/slime.tscn
 res://scripts/slime.gd
 res://scripts/phoenix.gd
 res://scripts/swimmable_water.gd
+res://scenes/maps/hyrule.tscn
+res://scenes/areas/moss.tscn
+res://scripts/boko.gd
+res://scripts/chest.gd
+res://scripts/death_screen.gd
+res://scripts/door.gd
+res://scripts/start.gd
