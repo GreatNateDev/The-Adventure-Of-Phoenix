@@ -132,6 +132,6 @@ func _on_death_await_timeout():
 
 func bomb():
 	var bomb_spn = preload("res://scenes/bomb.tscn")
-	var bomb = bomb_spn.instantiate()
-	get_parent().add_child(bomb)
-	bomb.position = self.position
+	var b = bomb_spn.instantiate()
+	get_parent().add_child(b)
+	b.position = self.position

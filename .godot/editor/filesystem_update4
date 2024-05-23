@@ -1,2 +1,8 @@
 res://scenes/hyrule.tscn
 res://scenes/bomb.tscn
+res://scripts/bomb.gd
+res://scenes/blue_ruppee.tscn
+res://scenes/slime.tscn
+res://scripts/slime.gd
+res://scripts/phoenix.gd
+res://scripts/swimmable_water.gd
