@@ -65,6 +65,8 @@ func _physics_process(_delta):
 		velocity = Vector2(0,0)
 	if Input.is_action_just_pressed("sword") and cool == false:
 		sword()
+	if Input.is_action_just_pressed("bomb") and cool == false:
+		bomb()
 	if playerData.hp <=0:
 		die()
 	if playerData.hp > playerData.max_hp:
@@ -127,3 +129,9 @@ func die():
 
 func _on_death_await_timeout():
 	get_tree().change_scene_to_file("res://scenes/death_screen.tscn")
+
+func bomb():
+	var bomb_spn = preload("res://scenes/bomb.tscn")
+	var bomb = bomb_spn.instantiate()
+	get_parent().add_child(bomb)
+	bomb.position = self.position

@@ -1,9 +1,2 @@
-res://scenes/swimmable_water.tscn
-res://scripts/swimmable_water.gd
 res://scenes/hyrule.tscn
-res://scenes/start.tscn
-res://scenes/phoenix.tscn
-res://scenes/death_screen.tscn
-res://scenes/sword_cave.tscn
-res://scenes/door.tscn
-res://scripts/save.gd
+res://scenes/bomb.tscn
