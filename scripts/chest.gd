@@ -22,7 +22,6 @@ func _process(_delta):
 	if spawned == false:
 		if player != null:
 			if Input.is_action_just_pressed("sword"):
-				print(item_for_func)
 				run(item_for_func)
 func run(itom : PackedScene):
 	spawned = true

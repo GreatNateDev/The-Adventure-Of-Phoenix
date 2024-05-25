@@ -24,6 +24,9 @@ func _ready():
 		global.just_entered_building = false
 	if enable_cam == false:
 		$cam.enabled = false
+	if playerData.has_bombs == true:
+		$CanvasLayer/bomb_num.show()
+		$CanvasLayer/bomb_sprite.show()
 func  verify_save_directory(path):
 	DirAccess.make_dir_absolute(path)
 func _physics_process(_delta):
@@ -65,7 +68,7 @@ func _physics_process(_delta):
 		velocity = Vector2(0,0)
 	if Input.is_action_just_pressed("sword") and cool == false:
 		sword()
-	if Input.is_action_just_pressed("bomb") and cool == false:
+	if Input.is_action_just_pressed("bomb") and cool == false and playerData.bombs != 0 and playerData.has_bombs == true:
 		bomb()
 	if playerData.hp <=0:
 		die()
@@ -80,6 +83,7 @@ func _physics_process(_delta):
 			pass
 		elif playerData.ruppees <= 100:
 			die()
+	$CanvasLayer/bomb_num.text = str(playerData.bombs)
 func last_mov_pos():
 	if velocity != Vector2(0,0):
 		last_mov = velocity
@@ -128,9 +132,10 @@ func die():
 
 
 func _on_death_await_timeout():
-	get_tree().change_scene_to_file("res://scenes/death_screen.tscn")
+	get_tree().change_scene_to_file("res://scenes/misc/death_screen.tscn")
 
 func bomb():
+	playerData.bombs -= 1
 	var bomb_spn = preload("res://scenes/entitys/bomb.tscn")
 	var b = bomb_spn.instantiate()
 	get_parent().add_child(b)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://c70xvk3duuom0"]
+[gd_scene load_steps=24 format=3 uid="uid://c70xvk3duuom0"]
 
 [ext_resource type="Texture2D" uid="uid://c5op31nmtwde6" path="res://assets/entitys/phoenix_mov.png" id="1_3kg3w"]
 [ext_resource type="Script" path="res://scripts/phoenix.gd" id="1_ohapw"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://mj4ox6xavpkq" path="res://assets/entitys/sword_phoenix.png" id="3_peeuq"]
 [ext_resource type="AudioStream" uid="uid://dfdo45swjxy1j" path="res://assets/sfx/sword_swing.mp3" id="4_3glpl"]
 [ext_resource type="Texture2D" uid="uid://bm4g3mr7225yf" path="res://assets/ruppees/ruppee_counter.png" id="4_ojuft"]
+[ext_resource type="Texture2D" uid="uid://bafti240gtxox" path="res://assets/items/bomb.png" id="5_nyt4d"]
 
 [sub_resource type="Animation" id="Animation_j8tae"]
 resource_name = "idle_down"
@@ -300,6 +301,21 @@ texture_filter = 1
 position = Vector2(108, 14)
 scale = Vector2(4.22414, 3.83333)
 texture = ExtResource("4_ojuft")
+
+[node name="bomb_sprite" type="Sprite2D" parent="CanvasLayer"]
+visible = false
+texture_filter = 1
+position = Vector2(163, 13)
+scale = Vector2(3, 3)
+texture = ExtResource("5_nyt4d")
+
+[node name="bomb_num" type="Label" parent="CanvasLayer"]
+visible = false
+offset_left = 174.0
+offset_top = 2.0
+offset_right = 214.0
+offset_bottom = 25.0
+text = "3"
 
 [node name="sword_sprite" type="Sprite2D" parent="."]
 visible = false

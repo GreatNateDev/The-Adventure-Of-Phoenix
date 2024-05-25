@@ -9,3 +9,4 @@ class_name SaveData
 @export var has_bombs = false
 @export var first_start = false
 @export var max_hp = 100
+@export var bombs = 3
