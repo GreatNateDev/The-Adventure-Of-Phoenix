@@ -14,7 +14,9 @@ func _on_body_entered(body:Node2D):
 		elif area == "b_bomb_cave":
 			global.entering_building = true
 			$trans_time.start()
-
+		elif area == "boss_cave_1":
+			global.entering_building = true
+			$trans_time.start()
 func _on_trans_time_timeout():
 	if area == "sword_cave":
 		get_tree().change_scene_to_file("res://scenes/maps/sword_cave.tscn")
@@ -30,3 +32,9 @@ func _on_trans_time_timeout():
 		get_tree().change_scene_to_file("res://scenes/maps/hyrule.tscn")
 		global.just_entered_building = true
 		global.tp_pos = Vector2(15420,4485)
+	elif area == "boss_cave_1":
+		get_tree().change_scene_to_file("res://scenes/maps/boss_cave_1.tscn")
+		global.just_entered_building = true
+	elif area == "b_boss_cave_1":
+		global.just_entered_building = true
+		global.tp_pos = Vector2(000000,000000)

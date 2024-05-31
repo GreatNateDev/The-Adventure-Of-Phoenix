@@ -1,6 +1,6 @@
 res://scenes/maps/hyrule.tscn
-res://scripts/phoenix.gd
-res://scripts/bomb.gd
-res://scripts/chest.gd
-res://scripts/save.gd
+res://scripts/door.gd
+res://scenes/maps/boss_cave_1.tscn
 res://scenes/entitys/phoenix.tscn
+res://scenes/areas/shop.tscn
+res://scripts/shop.gd
